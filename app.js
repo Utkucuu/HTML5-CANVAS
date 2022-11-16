@@ -163,5 +163,8 @@ hideShow()
 
       setInterval(move, 1)
 
+  /********************* #myCanvas5 ********************** */
 
+  var myCanvas6 = document.getElementById("myCanvas6")
+  var ctx6 = myCanvas5.getContext('2d')
 }

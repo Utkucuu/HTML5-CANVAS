@@ -98,3 +98,7 @@
     ctx5d.clearRect(0,0,400,200)```
 
 - not:animasyonu daha da hızlandırmak için  setInterval(move, 1) fonksiyonu bir döngü içine alına bilir
+
+***
+
+##### #myCanvas6
