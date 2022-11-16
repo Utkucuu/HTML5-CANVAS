@@ -138,19 +138,26 @@ hideShow()
         var myCanvas5d = document.getElementById("myCanvas5d")
         var ctx5d = myCanvas5d.getContext('2d')
         ctx5d.beginPath()
-        ctx5d.clearRect(0,0,400,200)
+        ctx5d.clearRect(0,0,400,300)
 
 
         ctx5d.fillStyle= "purple"
         ctx5d.arc(a,b,25,0*Math.PI,2*Math.PI)
         ctx5d.fill()
         a+=va
+        b+= vb
 
-        if(a > 400){
+        if(a > 380){
             va = -1
         }
-        if(a<0){
+        if(a<20){
             va =1
+        }
+        if(b> 280){
+            vb =-1
+        }
+        if(b== 20){
+            vb =1
         }
       }
 
