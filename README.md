@@ -39,3 +39,40 @@
 ***
 
 ##### #myCanvas4
+
+- Canvas içinde çizgi (doğru) oluşturmak için beginPath() fonksiyonu kullanılır.
+
+```ctx4.beginPath()```
+
+-Çizeceğimiz çizginin başlangıç konumunu vermek için
+
+```ctx4.moveTo(0,0)``` 
+
+-Çizeceğimiz çizginin bitiş konumunu vermek için
+
+ ```ctx4.lineTo(400,300)```
+
+-Son olarak doğrunun çizilmesi için stroke() fonksiyonu çalıştırılır.
+
+```ctx4.stroke()```
+
+-Çizgi rengi vermek için şekillerden farkl bir fonskiyon kullanılır.
+
+```ctx4.strokeStyle = "blue"```
+ 
+-Çizgi kalınlığı
+
+```ctx4.lineWidth = 7```
+
+- Çizdiğimiz doğruyu devam ettirerek kuruk şeklinde yeni doğrular ekleyebiliriz.
+``` ctx4.lineTo(400,300)
+    ctx4.lineTo(400,0)
+    ctx4.lineTo(200,0) ```
+
+-köşe geçişlerini ayarlamak için;
+```  ctx4.lineJoin= "bevel"  ``` düz
+```  ctx4.lineJoin= "round"  ``` oval
+```  ctx4.lineJoin= "miter"  ``` keskin
+
+-doğruyu kapatmak istersek
+```ctx4.closePath()```

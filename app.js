@@ -61,3 +61,42 @@ hideShow()
 }
 
      /********************* #myCanvas4 ********************** */
+
+     var myCanvas4 = document.getElementById("myCanvas4")
+    var ctx4 = myCanvas4.getContext('2d')
+    
+    ctx4.beginPath()
+    ctx4.strokeStyle = "blue"
+    ctx4.lineWidth = 7
+    ctx4.lineJoin= "bevel" //round //miter
+    ctx4.moveTo(0,0)
+    ctx4.lineTo(400,300)
+    ctx4.lineTo(400,0)
+    ctx4.lineTo(200,0)
+    ctx4.lineTo(200,200)
+    ctx4.lineTo(390,200)
+    ctx4.lineTo(390,10)
+    ctx4.lineTo(210,10)
+    ctx4.lineTo(210,190)
+    ctx4.lineTo(380,190)
+    ctx4.lineTo(380,20)
+    ctx4.lineTo(220,20)
+    ctx4.lineTo(220,180)
+    ctx4.lineTo(370,180)
+    ctx4.lineTo(370,30)
+    ctx4.lineTo(230,30)
+    ctx4.lineTo(230,170)
+    ctx4.lineTo(360,170)
+    ctx4.lineTo(360,40)
+    ctx4.lineTo(290,40)
+    ctx4.lineTo(290,100)
+    ctx4.closePath()
+    
+ 
+
+    
+    
+    
+    
+
+    ctx4.stroke()
