@@ -163,8 +163,43 @@ hideShow()
 
       setInterval(move, 1)
 
-  /********************* #myCanvas5 ********************** */
+  /********************* #myCanvas6 ********************** */
 
   var myCanvas6 = document.getElementById("myCanvas6")
-  var ctx6 = myCanvas5.getContext('2d')
+  var ctx6 = myCanvas6.getContext('2d')
+  var color =  ctx6.createLinearGradient(0, 0, 200, 100)
+  color.addColorStop(0.10, '#8deeee')
+  color.addColorStop(0.3, 'red')
+  color.addColorStop(0.5, '#8b658b')
+  color.addColorStop(0.70, 'purple')
+  color.addColorStop(1, '#eee8aa')
+  ctx6.fillStyle = color    
+  ctx6.fillRect(0,0,200,100)
+ 
+ 
+var ctx6a = myCanvas6.getContext("2d");
+var my_gradient = ctx6a.createLinearGradient(0, 110, 0, 190);
+my_gradient.addColorStop(0, "black");
+my_gradient.addColorStop(1, "white");
+ctx6a.fillStyle = my_gradient;
+ctx6a.fillRect(0, 120, 200, 100);
+
+
+var ctx6b = myCanvas6.getContext("2d");
+
+var my_gradient2 = ctx6b.createLinearGradient(0, 0,170, 0);
+my_gradient2.addColorStop(0, "black");
+my_gradient2.addColorStop(0.5 ,"red");
+my_gradient2.addColorStop(1, "white");
+ctx6b.fillStyle = my_gradient2;
+ctx6b.fillRect(0, 250, 200, 100);
+  
+  
+
+
+
+
+
+
+
 }

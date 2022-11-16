@@ -102,3 +102,16 @@
 ***
 
 ##### #myCanvas6
+- Linear gradient renk geçişlerini sağlamaktadır.
+- Gradient oluşturmak için createLinearGradient fonskiyonu kullanılır x ve y değerleri başlangıç konumudur. x1 ve y1 parametreleri ise x ile y değerlerinin bitiş konumlarıdır.
+```ctx6.context.createLinearGradient(x, y, x1, y1 )```
+
+- addColorStop ile 0 ve 1 arasında istediğimiz kadar renk verebilirz.
+```addColorStop(number, 'color');```
+
+-kullanım:
+  color.addColorStop(0, '#8deeee')
+  color.addColorStop(0.20, 'red')
+  color.addColorStop(0.5, '#8b658b')
+  color.addColorStop(0.7, 'black')
+  color.addColorStop(1, '#eee8aa')
