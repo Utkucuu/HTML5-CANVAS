@@ -89,7 +89,7 @@ hideShow()
     ctx4.lineTo(360,170)
     ctx4.lineTo(360,40)
     ctx4.lineTo(290,40)
-    ctx4.lineTo(290,100)
+    ctx4.lineTo(290,(Math.random()*300))
     ctx4.closePath()
     
  

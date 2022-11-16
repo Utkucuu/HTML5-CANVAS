@@ -76,3 +76,6 @@
 
 -doğruyu kapatmak istersek
 ```ctx4.closePath()```
+
+- random kullanmakta mümkündür.
+``` ctx4.lineTo(290,(Math.random()*300))```
