@@ -17,7 +17,7 @@
 -Renk komutu önce verilmeli 
 ```ctx.fillStyle="red"```
 
-- fillRect fonksiyonu şeklimizi 4 köşali hale getirip özelliklerini vermemizi sağlar.
+- fillRect fonksiyonu şeklimizi 4 köşeli hale getirip özelliklerini vermemizi sağlar.
 ```ctx.fillRect(x,y,widht,height)```
 <img src="/images/images1.png" alt="" width="300" height="300">
 
@@ -35,3 +35,7 @@
 ##### #myCanvas3
 -clearRect(0, 0, canvasGenişliği, canvasYüksekliği) şeklindeki komut, kordinat sistemindeki 0'a 0 noktasından başlayarak verdiğimiz canvas genişlik ve yükseklik değerleri kadar alanın içindeki nesneleri temizle anlamına gelir.
 ```ctx3.clearRect(0,0,400,300 )```
+
+***
+
+##### #myCanvas4

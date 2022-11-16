@@ -37,6 +37,8 @@ window.onload = function () {
         }
     }
 
+     /********************* #myCanvas3 ********************** */
+
     var myCanvas3 = document.getElementById("myCanvas3")
     var ctx3 = myCanvas3.getContext('2d')
 
@@ -57,3 +59,5 @@ hideShow()
     },1100)
     }
 }
+
+     /********************* #myCanvas4 ********************** */
