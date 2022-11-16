@@ -58,7 +58,7 @@ hideShow()
         ctx3.clearRect(0,0,400,300 )
     },1100)
     }
-}
+
 
      /********************* #myCanvas4 ********************** */
 
@@ -90,13 +90,71 @@ hideShow()
     ctx4.lineTo(360,40)
     ctx4.lineTo(290,40)
     ctx4.lineTo(290,(Math.random()*300))
+
     ctx4.closePath()
-    
- 
-
-    
-    
-    
-    
-
     ctx4.stroke()
+
+     /********************* #myCanvas5 ********************** */
+
+     var myCanvas5 = document.getElementById("myCanvas5")
+     var ctx5 = myCanvas5.getContext('2d')
+    ctx5.beginPath()
+    //  ctx.arc(x,y,yarıcap,başlangıçAçı,bitişAçı)
+                        // 0    ,    360
+    ctx5.arc(200,150,100,0*Math.PI,2*Math.PI)
+   
+    ctx5.stroke()
+    
+    var myCanvas5a = document.getElementById("myCanvas5a")
+    var ctx5a = myCanvas5a.getContext('2d')
+    ctx5a.beginPath()
+                         // 180    ,    360
+    ctx5a.arc(200,150,100,1*Math.PI,2*Math.PI)
+    ctx5a.stroke()
+                       
+    var myCanvas5b = document.getElementById("myCanvas5b")
+    var ctx5b = myCanvas5b.getContext('2d')
+    ctx5b.beginPath()
+    ctx5b.strokeStyle= "orange"
+    ctx5b.lineWidth = 3
+                        //270      ,    360
+    ctx5b.arc(200,150,100,1.5*Math.PI,2*Math.PI)
+    ctx5b.stroke()
+
+    var myCanvas5c = document.getElementById("myCanvas5c")
+    var ctx5c = myCanvas5c.getContext('2d')
+    ctx5c.beginPath()
+    ctx5c.fillStyle= "orange"
+    ctx5c.arc(200,150,100,0*Math.PI, 0.5*Math.PI)
+    ctx5c.fill()
+
+
+    a= 100
+    b=100
+    va=1
+    vb=1
+
+    function move () {
+        var myCanvas5d = document.getElementById("myCanvas5d")
+        var ctx5d = myCanvas5d.getContext('2d')
+        ctx5d.beginPath()
+        ctx5d.clearRect(0,0,400,200)
+
+
+        ctx5d.fillStyle= "purple"
+        ctx5d.arc(a,b,25,0*Math.PI,2*Math.PI)
+        ctx5d.fill()
+        a+=va
+
+        if(a > 400){
+            va = -1
+        }
+        if(a<0){
+            va =1
+        }
+      }
+
+      setInterval(move, 1)
+
+
+}
