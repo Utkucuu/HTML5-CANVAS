@@ -28,3 +28,10 @@
 ```  utku.fillRect(x, y, h, w)
         x += valueX
         y += valueY```
+
+        
+***
+
+##### #myCanvas3
+-clearRect(0, 0, canvasGenişliği, canvasYüksekliği) şeklindeki komut, kordinat sistemindeki 0'a 0 noktasından başlayarak verdiğimiz canvas genişlik ve yükseklik değerleri kadar alanın içindeki nesneleri temizle anlamına gelir.
+```ctx3.clearRect(0,0,400,300 )```
