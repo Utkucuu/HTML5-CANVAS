@@ -92,3 +92,7 @@
 ```ctx5c.fill()```
 
 -Şekli stroke() ile bitiriyorsak renkler .strokeStyle ile verilir.
+
+- bu şekilde bir kullanım sayesinde #myCanvas5d id li canvasta hareket yarattık. Aslında bu kullanım ile şekil bir görünüp bir kayboluyor
+```  ctx5d.beginPath()
+    ctx5d.clearRect(0,0,400,200)```
