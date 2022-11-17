@@ -123,7 +123,7 @@
 ***
 
 ##### #myCanvas7
-- dairesel bir gradient oluşturmak için createRadialGradient fonksiyonu kullanılır. r1 birinci gradient yarıçapı, r2 ikinci gradient yarıçapı ifade eder. Yine x ve y değerleri başlangıç ve bitiş noktalarıdır.
+- Dairesel bir gradient oluşturmak için createRadialGradient fonksiyonu kullanılır. r1 birinci gradient yarıçapı, r2 ikinci gradient yarıçapı ifade eder. Yine x ve y değerleri başlangıç ve bitiş noktalarıdır.
 
 ```ctx7.context.createRadialGradient(x1, y1, r1, x2, y2, r2);```
 
@@ -132,7 +132,7 @@
 ##### #myCanvas8
 
 - Canvas içinde text oluşturmak için `fiilText` fonskiyonu kullanılır. 
--
+
 ``` ctx8.context.fillText(text, x, y, maxWidth);```
  ```ctx8.font='italic 40pt arial';```yazın font, boyut tip 
  ```ctx8.shadowColor='black';``` gölge rengi
@@ -151,22 +151,24 @@ repetition: no-repeat
 repetition: repeat-x 
 repetition:repeat-y
 
--Not: Klasörden yüklediğim resmi kullanamadım neden bilmiyorum. Araştıracağım.
+* Not: Klasörden yüklediğim resmi kullanamadım neden bilmiyorum. Araştıracağım.
 
-
+***
 ##### #myCanvas10
 - drawImage fonskiyonu ile video veya resimleri canvas içinde kullanabiliriz.
-```context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);```
+```context.drawImage(img,imgx,imgy,imgwidth,imgheight,canvasX,canvasY,canvasWidth,canvasHeight);```
+[Denemek için tıkla](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_canvas_drawimage3)
 
-`img`	Kullanılacak görüntü, tuval veya video elemanını belirtir	
-`sx`	İsteğe bağlı. kırpma başlatmak için burada x koordinatı	
-`sy`	İsteğe bağlı. kırpma başlatmak için burada y koordinatı	
-`swidth`	İsteğe bağlı. Kesilmiş resim genişliği	
-`sheight`	İsteğe bağlı. Kesilmiş resim yüksekliği	
-`x`	Tuval üzerine görüntüyü nereye yerleştirileceğini x koordinatı	
-`y`	tuvale resim yerleştirmek için burada y koordinatı	
-`width`	İsteğe bağlı. Görüntünün genişliğini kullanmak üzere (stretch or reduce the image)	
-`height`	İsteğe bağlı. Resim yüksekliği kullanımı (stretch or reduce the image)
 
-- myCanvas10a 
-Canvasta mouse hareket etttiğinde mousenin sayfadaki konumunu alıp canvasın sayfadaki konumunda çıkardığımızda mousenin canvas üzerindeki koordinatını bulmuş oluruz.
+
+
+
+!!! 
+***myCanvas10a*** 
+Canvasta mouse hareket etttiğinde mousenin sayfadaki konumunu alıp canvasın sayfadaki konumunda çıkardığımızda mousenin canvas üzerindeki koordinatını bulmuş oluruz. Bu sayede canvasın konumu sebebiyle resim ile mause arasında uzaklık meydana gelmez.
+
+```var canvasLocation = myCanvas10a.getBoundingClientRect()```
+```console.log(canvasLocation)```
+```var ariX = event.clientX - canvasLocation.left```
+```var ariY = event.clientY - canvasLocation.top```
+***

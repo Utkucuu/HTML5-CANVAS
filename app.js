@@ -331,23 +331,19 @@ window.onload = function () {
     ctx10.drawImage(imageAri, 50,0,301,338);
     // ctx10.drawImage(imageAri, imageAri.width/10,imageAri.height/10,myCanvas10.width,myCanvas10.height);
     
-    // var myCanvas10a = document.getElementById("myCanvas10a")
-    // ctx10a = myCanvas10a.getContext("2d")
-    // var imageAri = document.getElementById("ari")
-    // // console.log(imageAri)
-    // ctx10a.drawImage(imageAri, 0,0,60,66);
 
-  
-       
+
+    var myCanvas10a = document.getElementById("myCanvas10a")
+    ctx10a = myCanvas10a.getContext("2d")
+    var imageAri2 = document.getElementById("ari")
+    ctx10a.drawImage(imageAri, 0,0,60,66);
+
     $("#myCanvas10a").mousemove(function (event) { 
      
         // values: e.clientX, e.clientY, e.pageX, e.pageY
 
-        var myCanvas10a = document.getElementById("myCanvas10a")
-        ctx10a = myCanvas10a.getContext("2d")
-
         ctx10a.clearRect(0, 0, 400, 300)
-        var imageAri2 = document.getElementById("ari2")
+         imageAri2 = document.getElementById("ari2")
    
        var canvasLocation = myCanvas10a.getBoundingClientRect()
         console.log(canvasLocation)
@@ -357,7 +353,7 @@ window.onload = function () {
         
 
         ctx10a.drawImage(imageAri2, ariX, ariY, 60, 66);
-        // ctx10a.drawImage(imageAri2, 0, 0, imageAri2.width, imageAri2.heigth,event.clientX, event.clientY, myCanvas10a.width, myCanvas10a.heigth );
+     
         console.log(event.clientY)
     });
 }
