@@ -115,3 +115,9 @@
   color.addColorStop(0.5, '#8b658b')
   color.addColorStop(0.7, 'black')
   color.addColorStop(1, '#eee8aa')
+
+***
+
+##### #myCanvas6
+- dairesel bir gradient oluşturmak için createRadialGradient fonksiyonu kullanılır. r1 birinci gradient yarıçapı, r2 ikinci gradient yarıçapı
+```ctx7.context.createRadialGradient(x1, y1, r1, x2, y2, r2);```
