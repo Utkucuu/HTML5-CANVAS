@@ -126,3 +126,7 @@
 - dairesel bir gradient oluşturmak için createRadialGradient fonksiyonu kullanılır. r1 birinci gradient yarıçapı, r2 ikinci gradient yarıçapı ifade eder. Yine x ve y değerleri başlangıç ve bitiş noktalarıdır.
 
 ```ctx7.context.createRadialGradient(x1, y1, r1, x2, y2, r2);```
+
+***
+
+##### #myCanvas8

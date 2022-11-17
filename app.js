@@ -214,5 +214,9 @@ window.onload = function () {
         let star_Size2= (Math.random()*2)
         ctx7.fillRect(starA,starB,star_Size1,star_Size2)
     }
+ 
+    var myCanvas8 = document.getElementById("myCanvas8")
+    var ctx8 = myCanvas8.getContext('2d')
+    
     
 }
