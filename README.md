@@ -145,3 +145,4 @@
 ##### #myCanvas9
 
 
+- hata alınıyor
