@@ -130,3 +130,7 @@
 ***
 
 ##### #myCanvas8
+
+- Canvas içinde text oluşturmak için `fiilText` fonskiyonu kullanılır. 
+-
+``` ctx8.context.fillText(text, x, y, maxWidth);```

@@ -194,7 +194,7 @@ window.onload = function () {
     ctx6b.fillStyle = my_gradient2;
     ctx6b.fillRect(0, 250, 200, 100);
 
-    /********************* #myCanvas6 ********************** */
+    /********************* #myCanvas7 ********************** */
 
     var myCanvas7 = document.getElementById("myCanvas7")
     var ctx7 = myCanvas7.getContext('2d')
@@ -214,9 +214,69 @@ window.onload = function () {
         let star_Size2= (Math.random()*2)
         ctx7.fillRect(starA,starB,star_Size1,star_Size2)
     }
+
+       /********************* #myCanvas8 ********************** */
  
     var myCanvas8 = document.getElementById("myCanvas8")
     var ctx8 = myCanvas8.getContext('2d')
+    ctx8.font='bold 40px arial';
+    var gra = ctx8.createLinearGradient(100, 150, 400, 0);
+    gra.addColorStop(0,"aqua")
+    gra.addColorStop(0.5,"orange")
+    gra.addColorStop(1,"blue")
+    ctx8.shadowColor='black';
+    ctx8.shadowOffsetX=0;
+    ctx8.shadowOffsetY=2;
+    ctx8.shadowBlur=10;
+    ctx8.fillStyle= gra
+    ctx8.fillText("Hello World", 90, 50);
+
+    ctx8.font='italic 40pt arial';
+    var gra = ctx8.createLinearGradient(100, 150, 400, 0);
+    gra.addColorStop(0,"red")
+    gra.addColorStop(0.5,"white")
+    gra.addColorStop(1,"black")
+    ctx8.shadowColor='black';
+    ctx8.shadowOffsetX=20;
+    ctx8.shadowOffsetY=2;
+    ctx8.shadowBlur=20;
+    ctx8.fillStyle= gra
+    ctx8.fillText("Hello World", 50, 125);
+
+
+    var ctx8a = myCanvas8.getContext('2d')
+    var valueGrad = 0.1
+    var  k = 0.1
+    function colorMove() {
+
+
+            ctx8a.font='bold 40pt ariel';
+    var gra1 = ctx8a.createLinearGradient(10, 150, 400, 0); 
+    gra1.addColorStop(0,"purple")
+    gra1.addColorStop( valueGrad,"yellow")
+    gra1.addColorStop(1,"green")
+    ctx8a.shadowColor='black';
+    ctx8a.shadowOffsetX=2;
+    ctx8a.shadowOffsetY=2;
+    ctx8a.shadowBlur=1;
+    ctx8a.fillStyle= gra1
+    ctx8a.fillText("Hello World", 50, 200);
+
     
+
+    if( valueGrad > 0.99){
+        k= -0.1
+    } 
+    if( valueGrad < 0.1){
+        k= 0.1
+    }
+    valueGrad+=k  
+
+
+    }
+
+    setInterval(colorMove, 50)
+
+
     
 }
