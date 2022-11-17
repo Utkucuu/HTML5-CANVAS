@@ -152,3 +152,18 @@ repetition: repeat-x
 repetition:repeat-y
 
 -Not: Klasörden yüklediğim resmi kullanamadım neden bilmiyorum. Araştıracağım.
+
+
+##### #myCanvas10
+- drawImage fonskiyonu ile video veya resimleri canvas içinde kullanabiliriz.
+```context.drawImage(img,sx,sy,swidth,sheight,x,y,width,height);```
+
+`img`	Kullanılacak görüntü, tuval veya video elemanını belirtir	
+`sx`	İsteğe bağlı. kırpma başlatmak için burada x koordinatı	
+`sy`	İsteğe bağlı. kırpma başlatmak için burada y koordinatı	
+`swidth`	İsteğe bağlı. Kesilmiş resim genişliği	
+`sheight`	İsteğe bağlı. Kesilmiş resim yüksekliği	
+`x`	Tuval üzerine görüntüyü nereye yerleştirileceğini x koordinatı	
+`y`	tuvale resim yerleştirmek için burada y koordinatı	
+`width`	İsteğe bağlı. Görüntünün genişliğini kullanmak üzere (stretch or reduce the image)	
+`height`	İsteğe bağlı. Resim yüksekliği kullanımı (stretch or reduce the image)

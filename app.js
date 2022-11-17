@@ -321,4 +321,31 @@ window.onload = function () {
     ctx9.fillStyle = pat
 
     ctx9.fillRect(0, 0, 400,300 )
+
+    /********************* #myCanvas10 ********************** */
+
+    var myCanvas10 = document.getElementById("myCanvas10")
+    ctx10 = myCanvas10.getContext("2d")
+    var imageAri = document.getElementById("ari")
+    // console.log(imageAri)
+    ctx10.drawImage(imageAri, 50,0,301,338);
+    // ctx10.drawImage(imageAri, imageAri.width/10,imageAri.height/10,myCanvas10.width,myCanvas10.height);
+    
+    var myCanvas10a = document.getElementById("myCanvas10a")
+    ctx10a = myCanvas10a.getContext("2d")
+    var imageAri = document.getElementById("ari")
+    // console.log(imageAri)
+    ctx10a.drawImage(imageAri, 0,0,60,66);
+
+       
+    $("#myCanvas10a").mousemove(function (e) { 
+        // values: e.clientX, e.clientY, e.pageX, e.pageY
+        var myCanvas10a = document.getElementById("myCanvas10a")
+        ctx10a = myCanvas10a.getContext("2d")
+        ctx10a.clearRect(0, 0, 400, 300)
+        var imageAri2 = document.getElementById("ari")
+        // console.log(imageAri)
+        ctx10a.drawImage(imageAri2, e.clientX-50, e.clientY-200, 60, 66);
+        
+    });
 }
