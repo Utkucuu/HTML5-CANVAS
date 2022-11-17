@@ -74,7 +74,7 @@
 ```ctx4.lineTo(200,0) ```
 
 *köşe geçişlerini ayarlamak için;
-```  ctx4.lineJoin= "bevel"  ``` düz
+```  ctx4.lineJoin= "bevel"  ``` düz 
 ```  ctx4.lineJoin= "round"  ``` oval
 ```  ctx4.lineJoin= "miter"  ``` keskin
 
@@ -166,8 +166,8 @@ repetition:repeat-y
 ***myCanvas10a*** 
 Canvasta mouse hareket etttiğinde mousenin sayfadaki konumunu alıp canvasın sayfadaki konumunda çıkardığımızda mousenin canvas üzerindeki koordinatını bulmuş oluruz. Bu sayede canvasın konumu sebebiyle resim ile mause arasında uzaklık meydana gelmez.
 
-```var canvasLocation = myCanvas10a.getBoundingClientRect()```
-```console.log(canvasLocation)```
-```var ariX = event.clientX - canvasLocation.left```
+> ```var canvasLocation = myCanvas10a.getBoundingClientRect()```
+>```console.log(canvasLocation)```
+>```var ariX = event.clientX - canvasLocation.left```
 ```var ariY = event.clientY - canvasLocation.top```
 ***
