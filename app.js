@@ -213,8 +213,6 @@ window.onload = function () {
         let star_Size1=  (Math.random()*2)
         let star_Size2= (Math.random()*2)
         ctx7.fillRect(starA,starB,star_Size1,star_Size2)
-
-        
     }
     
 }

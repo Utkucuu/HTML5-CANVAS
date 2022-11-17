@@ -32,13 +32,13 @@
         
 ***
 
-##### #myCanvas3
+##### myCanvas3
 *clearRect(0, 0, canvasGenişliği, canvasYüksekliği) şeklindeki komut, kordinat sistemindeki 0'a 0 noktasından başlayarak verdiğimiz canvas genişlik ve yükseklik değerleri kadar alanın içindeki nesneleri temizle anlamına gelir.
 ```ctx3.clearRect(0,0,400,300 )```
 
 ***
 
-##### #myCanvas4
+##### myCanvas4
 
 * Canvas içinde çizgi (doğru) oluşturmak için beginPath() fonksiyonu kullanılır.
 
@@ -82,7 +82,7 @@
 
 ***
 
-##### #myCanvas5
+##### myCanvas5
 
 -ctx.arc(x,y,yarıcap,başlangıçAçı,bitişAçı) şeklinde oval ya da çember gibi şekiller oluşturulur.
 
@@ -93,7 +93,7 @@
 
 -Şekli stroke() ile bitiriyorsak renkler .strokeStyle ile verilir.
 
-- bu şekilde bir kullanım sayesinde #myCanvas5d id li canvasta hareket yarattık. Aslında bu kullanım ile şekil bir görünüp bir kayboluyor
+- bu şekilde bir kullanım sayesinde myCanvas5d id li canvasta hareket yarattık. Aslında bu kullanım ile şekil bir görünüp bir kayboluyor
 ```  ctx5d.beginPath()
     ctx5d.clearRect(0,0,400,200)```
 
@@ -101,7 +101,7 @@
 
 ***
 
-##### #myCanvas6
+##### myCanvas6
 - Linear gradient renk geçişlerini sağlamaktadır.
 - Gradient oluşturmak için createLinearGradient fonskiyonu kullanılır x ve y değerleri başlangıç konumudur. x1 ve y1 parametreleri ise x ile y değerlerinin bitiş konumlarıdır.
 ```ctx6.context.createLinearGradient(x, y, x1, y1 )```
@@ -118,6 +118,6 @@
 
 ***
 
-##### #myCanvas6
+##### myCanvas6
 - dairesel bir gradient oluşturmak için createRadialGradient fonksiyonu kullanılır. r1 birinci gradient yarıçapı, r2 ikinci gradient yarıçapı
 ```ctx7.context.createRadialGradient(x1, y1, r1, x2, y2, r2);```
