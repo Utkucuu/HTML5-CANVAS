@@ -134,3 +134,8 @@
 - Canvas içinde text oluşturmak için `fiilText` fonskiyonu kullanılır. 
 -
 ``` ctx8.context.fillText(text, x, y, maxWidth);```
+ ```ctx8.font='italic 40pt arial';```yazın font, boyut tip 
+ ```ctx8.shadowColor='black';``` gölge rengi
+```ctx8.shadowOffsetX=20;``` gölge x ekseni konumu
+```ctx8.shadowOffsetY=2;```  gölge y ekseni konumu
+```ctx8.shadowBlur=20;```  gölge keskinliği

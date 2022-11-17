@@ -243,14 +243,12 @@ window.onload = function () {
     ctx8.fillStyle= gra
     ctx8.fillText("Hello World", 50, 125);
 
-
     var ctx8a = myCanvas8.getContext('2d')
     var valueGrad = 0.1
     var  k = 0.1
+
     function colorMove() {
-
-
-            ctx8a.font='bold 40pt ariel';
+    ctx8a.font='bold 40pt ariel';
     var gra1 = ctx8a.createLinearGradient(10, 150, 400, 0); 
     gra1.addColorStop(0,"purple")
     gra1.addColorStop( valueGrad,"yellow")
@@ -262,8 +260,6 @@ window.onload = function () {
     ctx8a.fillStyle= gra1
     ctx8a.fillText("Hello World", 50, 200);
 
-    
-
     if( valueGrad > 0.99){
         k= -0.1
     } 
@@ -272,11 +268,8 @@ window.onload = function () {
     }
     valueGrad+=k  
 
-
     }
 
     setInterval(colorMove, 50)
 
-
-    
 }
