@@ -167,3 +167,6 @@ repetition:repeat-y
 `y`	tuvale resim yerleştirmek için burada y koordinatı	
 `width`	İsteğe bağlı. Görüntünün genişliğini kullanmak üzere (stretch or reduce the image)	
 `height`	İsteğe bağlı. Resim yüksekliği kullanımı (stretch or reduce the image)
+
+- myCanvas10a 
+Canvasta mouse hareket etttiğinde mousenin sayfadaki konumunu alıp canvasın sayfadaki konumunda çıkardığımızda mousenin canvas üzerindeki koordinatını bulmuş oluruz.
