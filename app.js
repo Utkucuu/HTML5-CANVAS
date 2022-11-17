@@ -281,9 +281,44 @@ window.onload = function () {
 
     var pat = ctx9.createPattern(image, "repeat");
 
+
     ctx9.fillStyle = pat
 
     ctx9.fillRect(0, 0, 400,300 )
 
 
+    var myCanvas9a = document.getElementById("myCanvas9a")
+    var ctx9 = myCanvas9a.getContext('2d')
+
+    var image = document.getElementById("image")
+
+    var pat = ctx9.createPattern(image, "repeat-x");
+
+    ctx9.fillStyle = pat
+
+    ctx9.fillRect(0, 0, 400,300 )
+    
+
+    var myCanvas9b = document.getElementById("myCanvas9b")
+    var ctx9 = myCanvas9b.getContext('2d')
+
+    var image = document.getElementById("image")
+
+    var pat = ctx9.createPattern(image, "repeat-y");
+
+    ctx9.fillStyle = pat
+
+    ctx9.fillRect(0, 0, 400,300 )
+
+    
+    var myCanvas9c = document.getElementById("myCanvas9c")
+    var ctx9 = myCanvas9c.getContext('2d')
+
+    var image = document.getElementById("image")
+
+    var pat = ctx9.createPattern(image, "no-repeat");
+
+    ctx9.fillStyle = pat
+
+    ctx9.fillRect(0, 0, 400,300 )
 }

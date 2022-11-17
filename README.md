@@ -144,5 +144,11 @@
 
 ##### #myCanvas9
 
+- CreatePatter fonksiyonu ile bir götüntü yatay ya da dikey tekrarlanabilir veya desen oluşturulabilir.
+```context.createPattern(Image, repetition);```
+repetition: repeat
+repetition: no-repeat
+repetition: repeat-x 
+repetition:repeat-y
 
-- hata alınıyor çözüm aranacak
+-Not: Klasörden yüklediğim resmi kullanamadım neden bilmiyorum. Araştıracağım.
