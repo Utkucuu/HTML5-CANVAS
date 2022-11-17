@@ -113,12 +113,12 @@
 ```addColorStop(number, 'color');```
 
 * kullanım:
-  
-`color.addColorStop(0, '#8deeee')`
-`color.addColorStop(0.20, 'red')`
-`color.addColorStop(0.5, '#8b658b')`
-`color.addColorStop(0.7, 'black')`
-`color.addColorStop(1, '#eee8aa')`
+
+```color.addColorStop(0, '#8deeee')` ``
+```color.addColorStop(0.20, 'red')```
+```color.addColorStop(0.5, '#8b658b')```
+```color.addColorStop(0.7, 'black')```
+```color.addColorStop(1, '#eee8aa')```
 
 ***
 
