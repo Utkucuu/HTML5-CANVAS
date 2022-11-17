@@ -273,13 +273,23 @@ window.onload = function () {
     setInterval(colorMove, 50)
 
     /********************* #myCanvas9 ********************** */
-    var casper = document.getElementById('casper')
 
     var myCanvas9 = document.getElementById("myCanvas9")
-    var ctx9 = myCanvas9.getContext('2d');
-    var try1 = ctx9.createPattern(casper, "repeat");
-    ctx9.fillStyle = try1
-    ctx9.fillRect(0, 0, 400, 300)
+    var ctx9 = myCanvas9.getContext('2d')
 
+    var casper = document.getElementById("casper")
 
+    var pat = ctx9.createPattern(casper, "repeat");
+
+    ctx9.fillStyle = pat
+
+    ctx9.fillRect(0, 0, 200,200 )
+
+    // var c = document.getElementById("myCanvas9");
+    // var ctx9 = c.getContext("2d");
+    // var img = document.getElementById("casper");
+    // var pat = ctx9.createPattern(img, "repeat");
+    // ctx9.rect(0, 0, 150, 100);
+    // ctx9.fillStyle = pat;
+    // ctx9.fill();
 }
