@@ -139,3 +139,9 @@
 ```ctx8.shadowOffsetX=20;``` gölge x ekseni konumu
 ```ctx8.shadowOffsetY=2;```  gölge y ekseni konumu
 ```ctx8.shadowBlur=20;```  gölge keskinliği
+
+***
+
+##### #myCanvas9
+
+

@@ -200,76 +200,86 @@ window.onload = function () {
     var ctx7 = myCanvas7.getContext('2d')
     var renk = ctx7.createRadialGradient(70, 50, 10, 90, 60, 95);
 
-    renk.addColorStop(0,"white")
-    renk.addColorStop(0.5,"blue")
-    renk.addColorStop(1,"darkblue")
+    renk.addColorStop(0, "white")
+    renk.addColorStop(0.5, "blue")
+    renk.addColorStop(1, "darkblue")
     ctx7.fillStyle = renk
-    ctx7.fillRect(0,0,400,400)
+    ctx7.fillRect(0, 0, 400, 400)
 
-    ctx7.fillStyle='#fff';
+    ctx7.fillStyle = '#fff';
     for (let index = 0; index < 800; index++) {
-        let starA = (Math.random()*400)
-        let starB= (Math.random()*400)
-        let star_Size1=  (Math.random()*2)
-        let star_Size2= (Math.random()*2)
-        ctx7.fillRect(starA,starB,star_Size1,star_Size2)
+        let starA = (Math.random() * 400)
+        let starB = (Math.random() * 400)
+        let star_Size1 = (Math.random() * 2)
+        let star_Size2 = (Math.random() * 2)
+        ctx7.fillRect(starA, starB, star_Size1, star_Size2)
     }
 
-       /********************* #myCanvas8 ********************** */
- 
+    /********************* #myCanvas8 ********************** */
+
     var myCanvas8 = document.getElementById("myCanvas8")
     var ctx8 = myCanvas8.getContext('2d')
-    ctx8.font='bold 40px arial';
+    ctx8.font = 'bold 40px arial';
     var gra = ctx8.createLinearGradient(100, 150, 400, 0);
-    gra.addColorStop(0,"aqua")
-    gra.addColorStop(0.5,"orange")
-    gra.addColorStop(1,"blue")
-    ctx8.shadowColor='black';
-    ctx8.shadowOffsetX=0;
-    ctx8.shadowOffsetY=2;
-    ctx8.shadowBlur=10;
-    ctx8.fillStyle= gra
+    gra.addColorStop(0, "aqua")
+    gra.addColorStop(0.5, "orange")
+    gra.addColorStop(1, "blue")
+    ctx8.shadowColor = 'black';
+    ctx8.shadowOffsetX = 0;
+    ctx8.shadowOffsetY = 2;
+    ctx8.shadowBlur = 10;
+    ctx8.fillStyle = gra
     ctx8.fillText("Hello World", 90, 50);
 
-    ctx8.font='italic 40pt arial';
+    ctx8.font = 'italic 40pt arial';
     var gra = ctx8.createLinearGradient(100, 150, 400, 0);
-    gra.addColorStop(0,"red")
-    gra.addColorStop(0.5,"white")
-    gra.addColorStop(1,"black")
-    ctx8.shadowColor='black';
-    ctx8.shadowOffsetX=20;
-    ctx8.shadowOffsetY=2;
-    ctx8.shadowBlur=20;
-    ctx8.fillStyle= gra
+    gra.addColorStop(0, "red")
+    gra.addColorStop(0.5, "white")
+    gra.addColorStop(1, "black")
+    ctx8.shadowColor = 'black';
+    ctx8.shadowOffsetX = 20;
+    ctx8.shadowOffsetY = 2;
+    ctx8.shadowBlur = 20;
+    ctx8.fillStyle = gra
     ctx8.fillText("Hello World", 50, 125);
 
     var ctx8a = myCanvas8.getContext('2d')
     var valueGrad = 0.1
-    var  k = 0.1
+    var k = 0.1
 
     function colorMove() {
-    ctx8a.font='bold 40pt ariel';
-    var gra1 = ctx8a.createLinearGradient(10, 150, 400, 0); 
-    gra1.addColorStop(0,"purple")
-    gra1.addColorStop( valueGrad,"yellow")
-    gra1.addColorStop(1,"green")
-    ctx8a.shadowColor='black';
-    ctx8a.shadowOffsetX=2;
-    ctx8a.shadowOffsetY=2;
-    ctx8a.shadowBlur=1;
-    ctx8a.fillStyle= gra1
-    ctx8a.fillText("Hello World", 50, 200);
+        ctx8a.font = 'bold 40pt ariel';
+        var gra1 = ctx8a.createLinearGradient(10, 150, 400, 0);
+        gra1.addColorStop(0, "purple")
+        gra1.addColorStop(valueGrad, "yellow")
+        gra1.addColorStop(1, "green")
+        ctx8a.shadowColor = 'black';
+        ctx8a.shadowOffsetX = 2;
+        ctx8a.shadowOffsetY = 2;
+        ctx8a.shadowBlur = 1;
+        ctx8a.fillStyle = gra1
+        ctx8a.fillText("Hello World", 50, 200);
 
-    if( valueGrad > 0.99){
-        k= -0.1
-    } 
-    if( valueGrad < 0.1){
-        k= 0.1
-    }
-    valueGrad+=k  
+        if (valueGrad > 0.99) {
+            k = -0.1
+        }
+        if (valueGrad < 0.1) {
+            k = 0.1
+        }
+        valueGrad += k
 
     }
 
     setInterval(colorMove, 50)
+
+    /********************* #myCanvas9 ********************** */
+    var casper = document.getElementById('casper')
+
+    var myCanvas9 = document.getElementById("myCanvas9")
+    var ctx9 = myCanvas9.getContext('2d');
+    var try1 = ctx9.createPattern(casper, "repeat");
+    ctx9.fillStyle = try1
+    ctx9.fillRect(0, 0, 400, 300)
+
 
 }
