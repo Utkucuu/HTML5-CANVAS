@@ -166,8 +166,11 @@ repetition:repeat-y
 ***myCanvas10a*** 
 Canvasta mouse hareket etttiğinde mousenin sayfadaki konumunu alıp canvasın sayfadaki konumunda çıkardığımızda mousenin canvas üzerindeki koordinatını bulmuş oluruz. Bu sayede canvasın konumu sebebiyle resim ile mause arasında uzaklık meydana gelmez.
 
-> ```var canvasLocation = myCanvas10a.getBoundingClientRect()```
->```console.log(canvasLocation)```
->```var ariX = event.clientX - canvasLocation.left```
+```var canvasLocation = myCanvas10a.getBoundingClientRect()```
+```console.log(canvasLocation)```
+```var ariX = event.clientX - canvasLocation.left```
 ```var ariY = event.clientY - canvasLocation.top```
 ***
+
+
+##### #myCanvas11

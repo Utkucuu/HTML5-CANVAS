@@ -356,4 +356,23 @@ window.onload = function () {
      
         console.log(event.clientY)
     });
+
+    
+    /********************* #myCanvas10 ********************** */
+
+    myCAnvas11 = document.getElementById("myCanvas11")
+
+    ctx11 = myCanvas11.getContext("2d")
+
+
+
+
+
+
+
+
+
+
+
+
 }
