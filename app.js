@@ -578,8 +578,8 @@ window.onload = function () {
     /********************* #myCanvas18 ********************** */    
 
 
-    var myCanva18=document.getElementById('myCanvas18');
-    var ctx18=myCanva18.getContext('2d');
+    var myCanvas18=document.getElementById('myCanvas18');
+    var ctx18=myCanvas18.getContext('2d');
     ctx18.fillStyle='blue';
     ctx18.fillRect(10,10,50,50);
     ctx18.globalCompositeOperation='source-over';
@@ -600,6 +600,40 @@ destination-out
 lighter
 copy
 xor */
+
+/********************* #myCanvas19 ********************** */
+
+
+
+var myCanvas19=document.getElementById('myCanvas19');
+var ctx19 =myCanvas19.getContext('2d');
+var ball =document.getElementById("ball")
+
+var posx = 20
+var posy = 100
+var degX = 10
+var degY = -10
+var gravty = 1
+
+function ballMove() {
+
+    if(posy >200){
+        degX*=0.75
+        degY*=-0.65
+    }
+
+    
+
+    ctx19.clearRect(0,0,600,400)
+    ctx19.drawImage(ball, 0, 0, ball.width,ball.height, posx, posy, 50, 50);
+
+    degY+= gravty
+    posx+=degX
+    posy+=degY
+    
+  }
+
+  setInterval(ballMove, 100)
 
 
 }

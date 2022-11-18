@@ -258,3 +258,6 @@ lighter
 copy    
 xor     
 (denemek için tıkla)[https://www.w3schools.com/tags/playcanvas.asp?filename=playcanvas_globalcompop&preval=source-over]  
+
+***
+##### #myCanvas19
