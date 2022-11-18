@@ -257,9 +257,9 @@ window.onload = function () {
         ctx8a.shadowOffsetX = 2;
         ctx8a.shadowOffsetY = 2;
         ctx8a.shadowBlur = 1;
+
         ctx8a.fillStyle = gra1
         ctx8a.fillText("Hello World", 50, 200);
-
         if (valueGrad > 0.99) {
             k = -0.1
         }
@@ -267,10 +267,13 @@ window.onload = function () {
             k = 0.1
         }
         valueGrad += k
-
+        
     }
-
+    
+    
     setInterval(colorMove, 50)
+
+
 
     /********************* #myCanvas9 ********************** */
 
@@ -380,14 +383,35 @@ window.onload = function () {
 
     var ctx12 = myCanvas12.getContext("2d")
 
-    // ctx12.translate(120, 120)
     ctx12.translate(200,100)
     ctx12.rotate(Math.PI/4);
     ctx12.fillRect(0,0,150,150)
     
  
 
+    /********************* #myCanvas13 ********************** */
 
+    myCanvas13 = document.getElementById("myCanvas13")
+
+    var ctx13 = myCanvas13.getContext("2d")
+
+    ctx13.fillRect(0,0,150,150)
+    ctx13.save();
+    // context.scale(x, y);
+    
+    ctx13.scale(2, 1); //2 = %200 , 1 = % 100
+
+    ctx13.fillRect(20,200,150,150)
+
+    
+    /**
+    {
+   
+
+    }
+     */
+    ctx13.restore();
+    
 
 
 

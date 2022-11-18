@@ -158,13 +158,13 @@ repetition:repeat-y
 ```context.drawImage(img,imgx,imgy,imgwidth,imgheight,canvasX,canvasY,canvasWidth,canvasHeight);```
 [Denemek için tıkla](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_canvas_drawimage3)
 
-
+- drawImage ile kendi, klasörümüzden resim çekebiliriz.
 
 
 
 !!! 
 ***myCanvas10a*** 
-Canvasta mouse hareket etttiğinde mousenin sayfadaki konumunu alıp canvasın sayfadaki konumunda çıkardığımızda mousenin canvas üzerindeki koordinatını bulmuş oluruz. Bu sayede canvasın konumu sebebiyle resim ile mause arasında uzaklık meydana gelmez.
+Canvasta mouse hareket etttiğinde mouse un sayfadaki konumunu alıp canvasın sayfadaki konumundan çıkardığımızda mouse un canvas üzerindeki koordinatını bulmuş oluruz. Bu sayede canvasın konumu sebebiyle resim ile mause arasında uzaklık meydana gelmez.
 
 ```var canvasLocation = myCanvas10a.getBoundingClientRect()```
 ```console.log(canvasLocation)```
@@ -183,7 +183,18 @@ Canvasta mouse hareket etttiğinde mousenin sayfadaki konumunu alıp canvasın s
 -içi boş şeklin rengi 
 ``` ctx11.strokeStyle='red';```
 
+***
 ##### #myCanvas12
 
 - nesneyi döndürmek için kullanılır. (Math.PI = 180)
-ctx12.rotate(Math.PI/4)
+```ctx12.rotate(Math.PI/4)```
+
+
+***
+##### #myCanvas13
+- scale ile nesnemizi x ve y eksenlerine yüzdesel oarak büyütüp küçültebiliriz.
+ ```ctx13.scale(x, y); //x = %x , 1 = %y```
+
+- Save kullandığımızda save komtu öncesindeki özellikleri yani canvas durumunu kaydedip daha sonra ihtiyacımız olan yerde restore ile çağırabiliriz. Bu şekilde restore kullandığımız yerde bir önceki save durumunda kalmasını istediğimiz ayarlamaları koruyabiliriz.
+```ctx13.save();``` 
+```ctx13.restore();```
