@@ -360,9 +360,9 @@ window.onload = function () {
     
     /********************* #myCanvas10 ********************** */
 
-    myCAnvas11 = document.getElementById("myCanvas11")
+    var myCanvas11 = document.getElementById("myCanvas11")
 
-    ctx11 = myCanvas11.getContext("2d")
+    var ctx11 = myCanvas11.getContext("2d")
 
     ctx11.fillRect(0,0,150,150)
 
@@ -374,7 +374,18 @@ window.onload = function () {
     ctx11.translate(100, 100);
     ctx11.fillRect(0,0,150,150)
 
+    /********************* #myCanvas12 ********************** */
+
+    myCanvas12 = document.getElementById("myCanvas12")
+
+    var ctx12 = myCanvas12.getContext("2d")
+
+    // ctx12.translate(120, 120)
+    ctx12.translate(200,100)
+    ctx12.rotate(Math.PI/4);
+    ctx12.fillRect(0,0,150,150)
     
+ 
 
 
 
