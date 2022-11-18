@@ -174,3 +174,11 @@ Canvasta mouse hareket etttiğinde mousenin sayfadaki konumunu alıp canvasın s
 
 
 ##### #myCanvas11
+
+-oluşturulan nesnenin konumları translate ile verilebilir.
+```ctx11.translate(x, y);```
+```ctx11.fillRect(0,0,150,150)```
+- İçi boş bir şekil oluşturmaya yarar
+ ```ctx11.strokeRect(0, 0, 150, 150);```
+-içi boş şeklin rengi 
+``` ctx11.strokeStyle='red';```

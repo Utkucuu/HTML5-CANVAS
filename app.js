@@ -364,10 +364,17 @@ window.onload = function () {
 
     ctx11 = myCanvas11.getContext("2d")
 
+    ctx11.fillRect(0,0,150,150)
 
+    ctx11.translate(100, 100);
+    ctx11.fillRect(0,0,150,150)
+    ctx11.strokeStyle='red';
+    ctx11.strokeRect(0, 0, 150, 150);
+    ctx11.stroke()
+    ctx11.translate(100, 100);
+    ctx11.fillRect(0,0,150,150)
 
-
-
+    
 
 
 
