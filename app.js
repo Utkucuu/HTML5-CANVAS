@@ -429,15 +429,15 @@ window.onload = function () {
     var num3X = 50
     var num3Y = 100
 
-  
-    var  plus = 1
+
+    var plus = 1
     var sub = 1
     function ropMove() {
-  
-        num3X+= plus
-        num3Y+= sub
+
+        num3X += plus
+        num3Y += sub
         num2Y += sub
-       
+
 
         ctx14.clearRect(0, 0, 400, 300)
         ctx14.beginPath()
@@ -447,26 +447,26 @@ window.onload = function () {
         ctx14.beginPath()
         ctx14.arc(num3X, num3Y, 15, 0 * Math.PI, 2 * Math.PI);
         ctx14.fill()
-        
-        if(num3X < 50){
+
+        if (num3X < 50) {
             plus = +1
         }
 
-         if(num3X > 350){
+        if (num3X > 350) {
             plus = -1
         }
 
 
-        if(num3Y > 249){
+        if (num3Y > 249) {
             sub = -1
-            
+
         }
 
-        
-        if(num3Y < 100){
+
+        if (num3Y < 100) {
             sub = +1
         }
-        
+
 
 
     }
@@ -478,7 +478,20 @@ window.onload = function () {
 
     var ctx15 = myCanvas15.getContext("2d")
 
-    
-    
+    var imageBayb = document.getElementById("bayb")
+    ctx15.drawImage(imageBayb, 0, 0, 400, 300)
+    var imgData = ctx15.getImageData(0, 0, 400, 300);
 
+    for (let a = 0; a < imgData.data.length; a += 4) {
+
+    
+        imgData.data[a] = imgData.data[a] - 40   //r
+        imgData.data[a + 1] = imgData.data[a + 1] - 50//g
+        imgData.data[a + 2] = imgData.data[a + 2] - 100//b
+        imgData.data[a + 3] = 200 //a
+   }
+
+
+   ctx15.putImageData(imgData, 0,0);
+   
 }

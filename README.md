@@ -212,4 +212,16 @@ num3X, num3Y : üçüncü eğri bitiş kordinatları
 
 
 ***
-##### #myCanvas15  
+##### #myCanvas15    
+
+- getImageData() ile bir resmin piksel verilerini alabiliriz.
+
+```.getImageData(x, y, canvasWidht, canvasHeight);``` 
+
+- Aldığımız piksel verileri console da bir data objesinin içinde tutulur.  
+<img src="/images/imgData.png" alt="">  
+
+- a +=4 dememizin sebebi data objesi içindeki rgba değerlerinin her 4 tanesinde 255 in tekrar etmesidir.  
+```for (let a = 0; a < imgData.data.length; a += 4)```  
+- Değiştirdiğimiz data verilerini geri canvas içine geri göndeririz.  
+```ctx15.putImageData(imgData, 0,0);```
