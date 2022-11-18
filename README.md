@@ -193,7 +193,7 @@ Canvasta mouse hareket etttiğinde mouse un sayfadaki konumunu alıp canvasın s
 
 ***
 ##### #myCanvas13
-- scale ile nesnemizi x ve y eksenlerine yüzdesel oarak büyütüp küçültebiliriz.  
+- scale ile nesnemizi x ve y eksenlerine yüzdesel olarak büyütüp küçültebiliriz.  
  ```ctx13.scale(x, y); //x = %x , 1 = %y```
 
 - Save kullandığımızda save komtu öncesindeki özellikleri yani canvas durumunu kaydedip daha sonra ihtiyacımız olan yerde restore ile çağırabiliriz. Bu şekilde restore kullandığımız yerde bir önceki save durumunda kalmasını istediğimiz ayarlamaları koruyabiliriz.  
@@ -201,4 +201,15 @@ Canvasta mouse hareket etttiğinde mouse un sayfadaki konumunu alıp canvasın s
 ```ctx13.restore();```  
 
 ***
-##### #myCanvas14
+##### #myCanvas14  
+
+-bezierCurveTo fonskiyonu ile eğriler oluşturabiliriz. 
+ ```ctx14.bezierCurveTo(num1X, num1Y, num2X, num2Y, num3X, num3Y);```  
+num1X, num1Y : birinci eğri başlangıç kordinatları  
+num2X, num2Y : ikinci eğri kordinatları (kırılma eğrisi)  
+num3X, num3Y : üçüncü eğri bitiş kordinatları  
+<img src="/images/img_beziercurve.gif" alt="">
+
+
+***
+##### #myCanvas15  

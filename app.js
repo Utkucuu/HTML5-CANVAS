@@ -445,7 +445,7 @@ window.onload = function () {
         ctx14.bezierCurveTo(num1X, num1Y, num2X, num2Y, num3X, num3Y);
         ctx14.stroke()
         ctx14.beginPath()
-        ctx14.arc(num3X, num3Y, 20, 0 * Math.PI, 2 * Math.PI);
+        ctx14.arc(num3X, num3Y, 15, 0 * Math.PI, 2 * Math.PI);
         ctx14.fill()
         
         if(num3X < 50){
@@ -473,5 +473,12 @@ window.onload = function () {
 
     setInterval(ropMove, 10)
 
+
+    var myCanvas15 = document.getElementById("myCanvas15")
+
+    var ctx15 = myCanvas15.getContext("2d")
+
+    
+    
 
 }
