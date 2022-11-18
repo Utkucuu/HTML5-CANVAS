@@ -515,10 +515,8 @@ window.onload = function () {
     val1y = 150
     k1 = -1
     
-    
 
     function squareMove() {
-
         ctx16a.clearRect(0, 0, 400, 300)
 
         ctx16a.fillStyle = "red"
@@ -534,12 +532,11 @@ window.onload = function () {
     setInterval(squareMove, 50)
 
 
+
     var myCanvas16b = document.getElementById("myCanvas16b")
     var ctx16b = myCanvas16b.getContext("2d")
 
-
     function squareMove2() {
-
         ctx16b.clearRect(0, 0, 400, 300)
 
         ctx16b.fillStyle = "red"
@@ -556,4 +553,26 @@ window.onload = function () {
     }
     
     setInterval(squareMove2, 50)
+
+    
+    /********************* #myCanvas16 ********************** */
+
+
+    var myCanvas17 = document.getElementById("myCanvas17")
+    var ctx17 = myCanvas17.getContext("2d")
+    ctx17.beginPath()
+    ctx17.moveTo(0,0)
+    ctx17.lineTo(100,100)
+    ctx17.lineTo(300,100)
+    ctx17.lineTo(400,00)
+    ctx17.stroke()
+
+   ctx17.beginPath()
+    // ctx17.moveTo(0,0)
+    ctx17.lineTo(0,100)
+    ctx17.lineTo(100,200)
+    ctx17.lineTo(300,200)
+    ctx17.lineTo(400,100)
+    ctx17.stroke()
+
 }
