@@ -199,3 +199,6 @@ Canvasta mouse hareket etttiğinde mouse un sayfadaki konumunu alıp canvasın s
 - Save kullandığımızda save komtu öncesindeki özellikleri yani canvas durumunu kaydedip daha sonra ihtiyacımız olan yerde restore ile çağırabiliriz. Bu şekilde restore kullandığımız yerde bir önceki save durumunda kalmasını istediğimiz ayarlamaları koruyabiliriz.  
 ```ctx13.save();```  
 ```ctx13.restore();```  
+
+***
+##### #myCanvas14

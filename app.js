@@ -267,10 +267,10 @@ window.onload = function () {
             k = 0.1
         }
         valueGrad += k
-        
+
     }
-    
-    
+
+
     setInterval(colorMove, 50)
 
 
@@ -287,7 +287,7 @@ window.onload = function () {
 
     ctx9.fillStyle = pat
 
-    ctx9.fillRect(0, 0, 400,300 )
+    ctx9.fillRect(0, 0, 400, 300)
 
 
     var myCanvas9a = document.getElementById("myCanvas9a")
@@ -299,8 +299,8 @@ window.onload = function () {
 
     ctx9.fillStyle = pat
 
-    ctx9.fillRect(0, 0, 400,300 )
-    
+    ctx9.fillRect(0, 0, 400, 300)
+
 
     var myCanvas9b = document.getElementById("myCanvas9b")
     var ctx9 = myCanvas9b.getContext('2d')
@@ -311,9 +311,9 @@ window.onload = function () {
 
     ctx9.fillStyle = pat
 
-    ctx9.fillRect(0, 0, 400,300 )
+    ctx9.fillRect(0, 0, 400, 300)
 
-    
+
     var myCanvas9c = document.getElementById("myCanvas9c")
     var ctx9 = myCanvas9c.getContext('2d')
 
@@ -323,7 +323,7 @@ window.onload = function () {
 
     ctx9.fillStyle = pat
 
-    ctx9.fillRect(0, 0, 400,300 )
+    ctx9.fillRect(0, 0, 400, 300)
 
     /********************* #myCanvas10 ********************** */
 
@@ -331,51 +331,51 @@ window.onload = function () {
     ctx10 = myCanvas10.getContext("2d")
     var imageAri = document.getElementById("ari")
     // console.log(imageAri)
-    ctx10.drawImage(imageAri, 50,0,301,338);
+    ctx10.drawImage(imageAri, 50, 0, 301, 338);
     // ctx10.drawImage(imageAri, imageAri.width/10,imageAri.height/10,myCanvas10.width,myCanvas10.height);
-    
+
 
 
     var myCanvas10a = document.getElementById("myCanvas10a")
     ctx10a = myCanvas10a.getContext("2d")
     var imageAri2 = document.getElementById("ari")
-    ctx10a.drawImage(imageAri, 0,0,60,66);
+    ctx10a.drawImage(imageAri, 0, 0, 60, 66);
 
-    $("#myCanvas10a").mousemove(function (event) { 
-     
+    $("#myCanvas10a").mousemove(function (event) {
+
         // values: e.clientX, e.clientY, e.pageX, e.pageY
 
         ctx10a.clearRect(0, 0, 400, 300)
-         imageAri2 = document.getElementById("ari2")
-   
-       var canvasLocation = myCanvas10a.getBoundingClientRect()
-        console.log(canvasLocation)
-       var ariX = event.clientX - canvasLocation.left
-       var ariY = event.clientY - canvasLocation.top
+        imageAri2 = document.getElementById("ari2")
 
-        
+        var canvasLocation = myCanvas10a.getBoundingClientRect()
+        console.log(canvasLocation)
+        var ariX = event.clientX - canvasLocation.left
+        var ariY = event.clientY - canvasLocation.top
+
+
 
         ctx10a.drawImage(imageAri2, ariX, ariY, 60, 66);
-     
+
         console.log(event.clientY)
     });
 
-    
+
     /********************* #myCanvas10 ********************** */
 
     var myCanvas11 = document.getElementById("myCanvas11")
 
     var ctx11 = myCanvas11.getContext("2d")
 
-    ctx11.fillRect(0,0,150,150)
+    ctx11.fillRect(0, 0, 150, 150)
 
     ctx11.translate(100, 100);
-    ctx11.fillRect(0,0,150,150)
-    ctx11.strokeStyle='red';
+    ctx11.fillRect(0, 0, 150, 150)
+    ctx11.strokeStyle = 'red';
     ctx11.strokeRect(0, 0, 150, 150);
     ctx11.stroke()
     ctx11.translate(100, 100);
-    ctx11.fillRect(0,0,150,150)
+    ctx11.fillRect(0, 0, 150, 150)
 
     /********************* #myCanvas12 ********************** */
 
@@ -383,38 +383,95 @@ window.onload = function () {
 
     var ctx12 = myCanvas12.getContext("2d")
 
-    ctx12.translate(200,100)
-    ctx12.rotate(Math.PI/4);
-    ctx12.fillRect(0,0,150,150)
-    
- 
+    ctx12.translate(200, 100)
+    ctx12.rotate(Math.PI / 4);
+    ctx12.fillRect(0, 0, 150, 150)
+
+
 
     /********************* #myCanvas13 ********************** */
 
-    myCanvas13 = document.getElementById("myCanvas13")
+    var myCanvas13 = document.getElementById("myCanvas13")
 
     var ctx13 = myCanvas13.getContext("2d")
 
-    ctx13.fillRect(0,0,150,150)
+    ctx13.fillRect(0, 0, 150, 150)
     ctx13.save();
     // context.scale(x, y);
-    
+
     ctx13.scale(2, 1); //2 = %200 , 1 = % 100
 
-    ctx13.fillRect(20,200,150,150)
+    ctx13.fillRect(20, 200, 150, 150)
 
-    
     /**
     {
    
-
     }
      */
     ctx13.restore();
-    
+    /**
+    {
+   
+    }
+     */
 
 
+    /********************* #myCanvas14 ********************** */
 
+    var myCanvas14 = document.getElementById("myCanvas14")
+
+    var ctx14 = myCanvas14.getContext("2d")
+
+    var num1X = 200
+    var num1Y = 10
+    var num2X = 200
+    var num2Y = 100
+    var num3X = 50
+    var num3Y = 100
+
+  
+    var  plus = 1
+    var sub = 1
+    function ropMove() {
+  
+        num3X+= plus
+        num3Y+= sub
+        num2Y += sub
+       
+
+        ctx14.clearRect(0, 0, 400, 300)
+        ctx14.beginPath()
+        ctx14.moveTo(200, 0);
+        ctx14.bezierCurveTo(num1X, num1Y, num2X, num2Y, num3X, num3Y);
+        ctx14.stroke()
+        ctx14.beginPath()
+        ctx14.arc(num3X, num3Y, 20, 0 * Math.PI, 2 * Math.PI);
+        ctx14.fill()
+        
+        if(num3X < 50){
+            plus = +1
+        }
+
+         if(num3X > 350){
+            plus = -1
+        }
+
+
+        if(num3Y > 249){
+            sub = -1
+            
+        }
+
+        
+        if(num3Y < 100){
+            sub = +1
+        }
+        
+
+
+    }
+
+    setInterval(ropMove, 10)
 
 
 }
