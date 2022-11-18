@@ -474,6 +474,8 @@ window.onload = function () {
     setInterval(ropMove, 10)
 
 
+    /********************* #myCanvas15 ********************** */
+
     var myCanvas15 = document.getElementById("myCanvas15")
 
     var ctx15 = myCanvas15.getContext("2d")
@@ -484,14 +486,74 @@ window.onload = function () {
 
     for (let a = 0; a < imgData.data.length; a += 4) {
 
-    
+
         imgData.data[a] = imgData.data[a] - 40   //r
         imgData.data[a + 1] = imgData.data[a + 1] - 50//g
         imgData.data[a + 2] = imgData.data[a + 2] - 100//b
         imgData.data[a + 3] = 200 //a
-   }
+    }
 
 
-   ctx15.putImageData(imgData, 0,0);
-   
+    ctx15.putImageData(imgData, 0, 0);
+
+
+
+    /********************* #myCanvas16 ********************** */
+    var myCanvas16 = document.getElementById("myCanvas16")
+    var ctx16 = myCanvas16.getContext("2d")
+    ctx16.fillStyle = "red"
+    ctx16.fillRect(0, 0, 150, 150)
+    ctx16.globalAlpha = 0.5;
+    ctx16.fillStyle = "blue"
+    ctx16.fillRect(100, 100, 150, 150)
+
+
+    var myCanvas16a = document.getElementById("myCanvas16a")
+    var ctx16a = myCanvas16a.getContext("2d")
+
+    val1x = 150
+    val1y = 150
+    k1 = -1
+    
+    
+
+    function squareMove() {
+
+        ctx16a.clearRect(0, 0, 400, 300)
+
+        ctx16a.fillStyle = "red"
+        ctx16a.fillRect(0, 0, 150, 150)
+        ctx16a.globalAlpha = 0.5;
+        ctx16a.fillStyle = "blue"
+        ctx16a.fillRect(val1x, val1y, 150, 150)
+
+        val1x += k1
+        val1y += k1
+    }
+
+    setInterval(squareMove, 50)
+
+
+    var myCanvas16b = document.getElementById("myCanvas16b")
+    var ctx16b = myCanvas16b.getContext("2d")
+
+
+    function squareMove2() {
+
+        ctx16b.clearRect(0, 0, 400, 300)
+
+        ctx16b.fillStyle = "red"
+        ctx16b.fillRect(0, 0, 150, 150)
+        ctx16b.save()
+        ctx16b.globalAlpha = 0.5;
+        ctx16b.fillStyle = "blue"
+        ctx16b.fillRect(val1x, val1y, 150, 150)
+
+        val1x += k1
+        val1y += k1
+
+        ctx16b.restore()
+    }
+    
+    setInterval(squareMove2, 50)
 }

@@ -223,5 +223,14 @@ num3X, num3Y : üçüncü eğri bitiş kordinatları
 
 - a +=4 dememizin sebebi data objesi içindeki rgba değerlerinin her 4 tanesinde 255 in tekrar etmesidir.  
 ```for (let a = 0; a < imgData.data.length; a += 4)```  
-- Değiştirdiğimiz data verilerini geri canvas içine geri göndeririz.  
+- Değiştirdiğimiz data verilerini canvas içine geri göndeririz.  
 ```ctx15.putImageData(imgData, 0,0);```
+
+
+***
+##### #myCanvas16  
+
+```globalAlpha = x;``` 0<= x <=1  
+
+!!!  
+myCanvas16b de kırmızı karenin saydam görünmemesi `save()` ve `restore()` ile sağlanmıştır.
