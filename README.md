@@ -234,3 +234,27 @@ num3X, num3Y : üçüncü eğri bitiş kordinatları
 
 !!!  
 myCanvas16b de kırmızı karenin saydam görünmemesi `save()` ve `restore()` ile sağlanmıştır.
+
+
+***
+##### #myCanvas17
+-her seferinde birbirinden bağımsız çizimler yapmak için beginPath
+ ve stroke yapılarını kullanırız  
+```ctx17.beginPath()```
+```ctx17.stroke()```
+
+***
+##### #myCanvas18
+```context.globalCompositeOperation =' '```
+source-over  
+source-atop  
+source-in  
+source-out  
+destination-over  
+destination-atop  
+destination-in  
+destination-out  
+lighter  
+copy    
+xor     
+(denemek için tıkla)[https://www.w3schools.com/tags/playcanvas.asp?filename=playcanvas_globalcompop&preval=source-over]  

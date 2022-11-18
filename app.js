@@ -555,7 +555,7 @@ window.onload = function () {
     setInterval(squareMove2, 50)
 
     
-    /********************* #myCanvas16 ********************** */
+    /********************* #myCanvas17 ********************** */
 
 
     var myCanvas17 = document.getElementById("myCanvas17")
@@ -574,5 +574,32 @@ window.onload = function () {
     ctx17.lineTo(300,200)
     ctx17.lineTo(400,100)
     ctx17.stroke()
+
+    /********************* #myCanvas18 ********************** */    
+
+
+    var myCanva18=document.getElementById('myCanvas18');
+    var ctx18=myCanva18.getContext('2d');
+    ctx18.fillStyle='blue';
+    ctx18.fillRect(10,10,50,50);
+    ctx18.globalCompositeOperation='source-over';
+    ctx18.beginPath();
+    ctx18.fillStyle='red';
+    ctx18.arc(50,50,30,0,2*Math.PI);
+    ctx18.fill();
+
+/**
+source-over
+source-atop
+source-in
+source-out
+destination-over
+destination-atop
+destination-in
+destination-out
+lighter
+copy
+xor */
+
 
 }
