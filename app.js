@@ -635,5 +635,10 @@ function ballMove() {
 
   setInterval(ballMove, 100)
 
+  var myCanvas20=document.getElementById('myCanvas20');
+  var ctx20 =myCanvas20.getContext('2d');
+  var winter =document.getElementById("winter")
+  
+
 
 }
