@@ -635,7 +635,7 @@ window.onload = function () {
 
     setInterval(ballMove, 100)
 
-/********************* #myCanvas20 ********************** */
+    /********************* #myCanvas20 ********************** */
 
 
     var myCanvas20 = document.getElementById('myCanvas20');
@@ -649,48 +649,82 @@ window.onload = function () {
     for (let index = 0; index < 1000; index++) {
 
         snow.push({
-            "x" : 600 * Math.random(),
-            "y" : 400 * Math.random(),
-            "vy" : 1,
-            "r" : Math.random()}
+            "x": 600 * Math.random(),
+            "y": 400 * Math.random(),
+            "vy": 1,
+            "r": Math.random()
+        }
         )
 
         //  var view = new Image()
 
     }
 
-    
+
     function snowMove() {
 
-        ctx20.clearRect(0,0,600,400)
+        ctx20.clearRect(0, 0, 600, 400)
         ctx20.drawImage(winter, 0, 0, winter.width, winter.height, 0, 0, 600, 400)
-        ctx20.fillStyle="#eee"
+        ctx20.fillStyle = "#eee"
         // ctx20.globalAlpha=0.8
         for (let i = 0; i < snow.length; i++) {
-            
+
             ctx20.beginPath()
-            ctx20.arc(snow[i].x, snow[i].y, snow[i].r, Math.PI *0 , Math.PI *2);
-         
-            
+            ctx20.arc(snow[i].x, snow[i].y, snow[i].r, Math.PI * 0, Math.PI * 2);
+
+
             ctx20.fill()
 
-            snow[i].y+=snow[i].vy 
-            snow[i].X+=10-Math.random()
+            snow[i].y += snow[i].vy
+            snow[i].X += 10 - Math.random()
 
 
-            if(snow[i].y>400){
-                snow[i].X=600*Math.random()
-                snow[i].y= -400*Math.random()
-                snow[i].r=Math.random()
-                snow[i].vy=10*Math.random()
-                
+            if (snow[i].y > 400) {
+                snow[i].X = 600 * Math.random()
+                snow[i].y = -400 * Math.random()
+                snow[i].r = Math.random()
+                snow[i].vy = 10 * Math.random()
+
             }
 
         }
     }
 
+    setInterval(snowMove, 10)
+
+    /********************* #myCanvas21 ********************** */
+
+
+    var myCanvas21 = document.getElementById('myCanvas21');
+    var ctx21 = myCanvas21.getContext('2d');
+
+    ctx21.font = "30px arial" 
+    ctx21.textAlign='end'
+    ctx21.fillText("End", 200, 50);
+
+    ctx21.beginPath()
+    ctx21.arc(200,50,5,0*Math.PI,2*Math.PI)
+    ctx21.fill()
     
 
+    ctx21.font = "30px arial" 
+    ctx21.textAlign='start'
+    ctx21.fillText("Start", 200, 150);
 
-    setInterval(snowMove,10)
+    ctx21.beginPath()
+    ctx21.arc(200,150,5,0*Math.PI,2*Math.PI)
+    ctx21.fill()
+
+    ctx21.font = "30spx arial" 
+    ctx21.textAlign='center'
+    ctx21.fillText("Center", 200, 250);
+
+    ctx21.beginPath()
+    ctx21.arc(200,240,50,0*Math.PI,2*Math.PI)
+    ctx21.stroke()
+    /********************* #myCanvas22 ********************** */
+
+
+    var myCanvas22 = document.getElementById('myCanvas22');
+    var ctx22 = myCanvas22.getContext('2d');
 }
