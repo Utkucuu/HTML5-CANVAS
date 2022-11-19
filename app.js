@@ -514,7 +514,7 @@ window.onload = function () {
     val1x = 150
     val1y = 150
     k1 = -1
-    
+
 
     function squareMove() {
         ctx16a.clearRect(0, 0, 400, 300)
@@ -551,94 +551,146 @@ window.onload = function () {
 
         ctx16b.restore()
     }
-    
+
     setInterval(squareMove2, 50)
 
-    
+
     /********************* #myCanvas17 ********************** */
 
 
     var myCanvas17 = document.getElementById("myCanvas17")
     var ctx17 = myCanvas17.getContext("2d")
     ctx17.beginPath()
-    ctx17.moveTo(0,0)
-    ctx17.lineTo(100,100)
-    ctx17.lineTo(300,100)
-    ctx17.lineTo(400,00)
+    ctx17.moveTo(0, 0)
+    ctx17.lineTo(100, 100)
+    ctx17.lineTo(300, 100)
+    ctx17.lineTo(400, 00)
     ctx17.stroke()
 
-   ctx17.beginPath()
+    ctx17.beginPath()
     // ctx17.moveTo(0,0)
-    ctx17.lineTo(0,100)
-    ctx17.lineTo(100,200)
-    ctx17.lineTo(300,200)
-    ctx17.lineTo(400,100)
+    ctx17.lineTo(0, 100)
+    ctx17.lineTo(100, 200)
+    ctx17.lineTo(300, 200)
+    ctx17.lineTo(400, 100)
     ctx17.stroke()
 
-    /********************* #myCanvas18 ********************** */    
+    /********************* #myCanvas18 ********************** */
 
 
-    var myCanvas18=document.getElementById('myCanvas18');
-    var ctx18=myCanvas18.getContext('2d');
-    ctx18.fillStyle='blue';
-    ctx18.fillRect(10,10,50,50);
-    ctx18.globalCompositeOperation='source-over';
+    var myCanvas18 = document.getElementById('myCanvas18');
+    var ctx18 = myCanvas18.getContext('2d');
+    ctx18.fillStyle = 'blue';
+    ctx18.fillRect(10, 10, 50, 50);
+    ctx18.globalCompositeOperation = 'source-over';
     ctx18.beginPath();
-    ctx18.fillStyle='red';
-    ctx18.arc(50,50,30,0,2*Math.PI);
+    ctx18.fillStyle = 'red';
+    ctx18.arc(50, 50, 30, 0, 2 * Math.PI);
     ctx18.fill();
 
-/**
-source-over
-source-atop
-source-in
-source-out
-destination-over
-destination-atop
-destination-in
-destination-out
-lighter
-copy
-xor */
+    /**
+    source-over
+    source-atop
+    source-in
+    source-out
+    destination-over
+    destination-atop
+    destination-in
+    destination-out
+    lighter
+    copy
+    xor */
 
-/********************* #myCanvas19 ********************** */
+    /********************* #myCanvas19 ********************** */
 
 
 
-var myCanvas19=document.getElementById('myCanvas19');
-var ctx19 =myCanvas19.getContext('2d');
-var ball =document.getElementById("ball")
+    var myCanvas19 = document.getElementById('myCanvas19');
+    var ctx19 = myCanvas19.getContext('2d');
+    var ball = document.getElementById("ball")
 
-var posx = 20
-var posy = 100
-var degX = 10
-var degY = -10
-var gravty = 1
+    var posx = 20
+    var posy = 100
+    var degX = 10
+    var degY = -10
+    var gravty = 1
 
-function ballMove() {
+    function ballMove() {
 
-    if(posy >200){
-        degX*=0.75
-        degY*=-0.65
+        if (posy > 200) {
+            degX *= 0.75
+            degY *= -0.65
+        }
+
+
+
+        ctx19.clearRect(0, 0, 600, 400)
+        ctx19.drawImage(ball, 0, 0, ball.width, ball.height, posx, posy, 50, 50);
+
+        degY += gravty
+        posx += degX
+        posy += degY
+
+    }
+
+    setInterval(ballMove, 100)
+
+/********************* #myCanvas20 ********************** */
+
+
+    var myCanvas20 = document.getElementById('myCanvas20');
+    var ctx20 = myCanvas20.getContext('2d');
+    var winter = document.getElementById("winter")
+
+    var snow = []
+
+    console.log(snow)
+
+    for (let index = 0; index < 1000; index++) {
+
+        snow.push({
+            "x" : 600 * Math.random(),
+            "y" : 400 * Math.random(),
+            "vy" : 1,
+            "r" : Math.random()}
+        )
+
+        //  var view = new Image()
+
+    }
+
+    
+    function snowMove() {
+
+        ctx20.clearRect(0,0,600,400)
+        ctx20.drawImage(winter, 0, 0, winter.width, winter.height, 0, 0, 600, 400)
+        ctx20.fillStyle="#eee"
+        // ctx20.globalAlpha=0.8
+        for (let i = 0; i < snow.length; i++) {
+            
+            ctx20.beginPath()
+            ctx20.arc(snow[i].x, snow[i].y, snow[i].r, Math.PI *0 , Math.PI *2);
+         
+            
+            ctx20.fill()
+
+            snow[i].y+=snow[i].vy 
+            snow[i].X+=10-Math.random()
+
+
+            if(snow[i].y>400){
+                snow[i].X=600*Math.random()
+                snow[i].y= -400*Math.random()
+                snow[i].r=Math.random()
+                snow[i].vy=10*Math.random()
+                
+            }
+
+        }
     }
 
     
 
-    ctx19.clearRect(0,0,600,400)
-    ctx19.drawImage(ball, 0, 0, ball.width,ball.height, posx, posy, 50, 50);
 
-    degY+= gravty
-    posx+=degX
-    posy+=degY
-    
-  }
-
-  setInterval(ballMove, 100)
-
-  var myCanvas20=document.getElementById('myCanvas20');
-  var ctx20 =myCanvas20.getContext('2d');
-  var winter =document.getElementById("winter")
-  
-
-
+    setInterval(snowMove,10)
 }
