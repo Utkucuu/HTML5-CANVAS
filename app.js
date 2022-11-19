@@ -698,33 +698,50 @@ window.onload = function () {
     var myCanvas21 = document.getElementById('myCanvas21');
     var ctx21 = myCanvas21.getContext('2d');
 
-    ctx21.font = "30px arial" 
-    ctx21.textAlign='end'
+    ctx21.font = "30px arial"
+    ctx21.textAlign = 'end'
     ctx21.fillText("End", 200, 50);
 
     ctx21.beginPath()
-    ctx21.arc(200,50,5,0*Math.PI,2*Math.PI)
+    ctx21.arc(200, 50, 5, 0 * Math.PI, 2 * Math.PI)
     ctx21.fill()
-    
 
-    ctx21.font = "30px arial" 
-    ctx21.textAlign='start'
+
+    ctx21.font = "30px arial"
+    ctx21.textAlign = 'start'
     ctx21.fillText("Start", 200, 150);
 
     ctx21.beginPath()
-    ctx21.arc(200,150,5,0*Math.PI,2*Math.PI)
+    ctx21.arc(200, 150, 5, 0 * Math.PI, 2 * Math.PI)
     ctx21.fill()
 
-    ctx21.font = "30spx arial" 
-    ctx21.textAlign='center'
+    ctx21.font = "30spx arial"
+    ctx21.textAlign = 'center'
     ctx21.fillText("Center", 200, 250);
 
     ctx21.beginPath()
-    ctx21.arc(200,240,50,0*Math.PI,2*Math.PI)
+    ctx21.arc(200, 240, 50, 0 * Math.PI, 2 * Math.PI)
     ctx21.stroke()
     /********************* #myCanvas22 ********************** */
 
 
     var myCanvas22 = document.getElementById('myCanvas22');
     var ctx22 = myCanvas22.getContext('2d');
+    ctx22.fillStyle = "yellow";
+    ctx22.fillRect(0, 0, 250, 100)
+
+    ctx22.setTransform(1, 0, -0.5, 1, 230, 10);
+    ctx22.fillStyle = "red";
+    ctx22.fillRect(0, 300, 350, 100);
+
+    ctx22.setTransform(1, 0.5, 0, 1, 30, 10);
+    ctx22.fillStyle = "blue";
+    ctx22.fillRect(200, 300, 150, 100);
+
+    ctx22.setTransform(1, 0, 0, 1.5, 0, 0);
+    ctx22.fillStyle = 'lightblue';
+    ctx22.fillRect(50, 50, 250, 100);
+    ctx22.fillStyle = 'red';
+    ctx22.font = '30px Arial';
+    ctx22.fillText('Transform', 60, 80);
 }
