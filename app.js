@@ -422,53 +422,35 @@ window.onload = function () {
 
     var ctx14 = myCanvas14.getContext("2d")
 
-    var num1X = 200
+    var num1X = 300
     var num1Y = 10
-    var num2X = 200
-    var num2Y = 100
-    var num3X = 50
+    var num2X = 300
+    var num2Y = 70
+    var num3X = 150
     var num3Y = 100
 
-
-    var plus = 1
-    var sub = 1
+    var plus = 2.5
+    var sub = 3
+    var vyy= -0.1 / 2  
     function ropMove() {
-
+        sub+=  vyy
         num3X += plus
-        num3Y += sub
-        num2Y += sub
+        num3Y += sub 
+        // num2Y += sub
 
-
-        ctx14.clearRect(0, 0, 400, 300)
+        ctx14.clearRect(0, 0, 600, 600)
         ctx14.beginPath()
-        ctx14.moveTo(200, 0);
+        ctx14.moveTo(300, 0);
         ctx14.bezierCurveTo(num1X, num1Y, num2X, num2Y, num3X, num3Y);
         ctx14.stroke()
         ctx14.beginPath()
         ctx14.arc(num3X, num3Y, 15, 0 * Math.PI, 2 * Math.PI);
         ctx14.fill()
 
-        if (num3X < 50) {
-            plus = +1
+        if(num3Y < 50){
+             plus = +2.5
+ 
         }
-
-        if (num3X > 350) {
-            plus = -1
-        }
-
-
-        if (num3Y > 249) {
-            sub = -1
-
-        }
-
-
-        if (num3Y < 100) {
-            sub = +1
-        }
-
-
-
     }
 
     setInterval(ropMove, 10)
@@ -727,21 +709,32 @@ window.onload = function () {
 
     var myCanvas22 = document.getElementById('myCanvas22');
     var ctx22 = myCanvas22.getContext('2d');
+   
+    ctx22.globalAlpha = 0.5
+    ctx22.setTransform(1, 0, -0.5, 1, 0, 350);
     ctx22.fillStyle = "yellow";
-    ctx22.fillRect(0, 0, 250, 100)
+    ctx22.fillRect(125, 0, 350, 150)
 
-    ctx22.setTransform(1, 0, -0.5, 1, 230, 10);
+    ctx22.globalAlpha = 1
+    ctx22.setTransform(1, 0, -0.5, 1, 0, 0);
     ctx22.fillStyle = "red";
-    ctx22.fillRect(0, 300, 350, 100);
-
-    ctx22.setTransform(1, 0.5, 0, 1, 30, 10);
+    ctx22.fillRect(150, 50, 350, 150);
+    
+    ctx22.globalAlpha = 0.8
+    ctx22.setTransform(0, 15, -0.5, 1, 475, 50);
     ctx22.fillStyle = "blue";
-    ctx22.fillRect(200, 300, 150, 100);
+    ctx22.fillRect(0, 0, 20, 150);
 
+    ctx22.globalAlpha = 0.8
     ctx22.setTransform(1, 0, 0, 1.5, 0, 0);
     ctx22.fillStyle = 'lightblue';
-    ctx22.fillRect(50, 50, 250, 100);
-    ctx22.fillStyle = 'red';
+    ctx22.fillRect(50, 133, 350, 200);
+    ctx22.fillStyle = 'black';
     ctx22.font = '30px Arial';
-    ctx22.fillText('Transform', 60, 80);
+    ctx22.fillText('Transform', 220, 280);
+
+    ctx22.globalAlpha = 0.3
+    ctx22.setTransform(0, 1.8, 1, -2, 50, 200);
+    ctx22.fillStyle='orange'
+    ctx22.fillRect(0,0,168,75)
 }
