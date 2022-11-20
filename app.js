@@ -447,10 +447,17 @@ window.onload = function () {
         ctx14.arc(num3X, num3Y, 15, 0 * Math.PI, 2 * Math.PI);
         ctx14.fill()
 
-        if(num3Y < 50){
-             plus = +2.5
+        console.log(num3Y)
+        if(num3Y < 100){
+             plus = -2.5
+             sub = 3
  
         }
+        if(num3X == 150){
+            plus = +2.5
+            sub = 3
+
+       }
     }
 
     setInterval(ropMove, 10)
