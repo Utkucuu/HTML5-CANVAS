@@ -744,4 +744,15 @@ window.onload = function () {
     ctx22.setTransform(0, 1.8, 1, -2, 50, 200);
     ctx22.fillStyle='orange'
     ctx22.fillRect(0,0,168,75)
+
+
+
+    var myCanvas23 = document.getElementById('myCanvas23');
+    var ctx23 = myCanvas23.getContext('2d');
+   var he = myCanvas23.height 
+   var wi = myCanvas23.width 
+
+
+
+
 }
