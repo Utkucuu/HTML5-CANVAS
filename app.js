@@ -431,11 +431,11 @@ window.onload = function () {
 
     var plus = 2.5
     var sub = 3
-    var vyy= -0.1 / 2  
+    var vyy = -0.1 / 2
     function ropMove() {
-        sub+=  vyy
+        sub += vyy
         num3X += plus
-        num3Y += sub 
+        num3Y += sub
         // num2Y += sub
 
         ctx14.clearRect(0, 0, 600, 600)
@@ -448,16 +448,16 @@ window.onload = function () {
         ctx14.fill()
 
         console.log(num3Y)
-        if(num3Y < 100){
-             plus = -2.5
-             sub = 3
- 
+        if (num3Y < 100) {
+            plus = -2.5
+            sub = 3
+
         }
-        if(num3X == 150){
+        if (num3X == 150) {
             plus = +2.5
             sub = 3
 
-       }
+        }
     }
 
     setInterval(ropMove, 10)
@@ -716,7 +716,7 @@ window.onload = function () {
 
     var myCanvas22 = document.getElementById('myCanvas22');
     var ctx22 = myCanvas22.getContext('2d');
-   
+
     ctx22.globalAlpha = 0.5
     ctx22.setTransform(1, 0, -0.5, 1, 0, 350);
     ctx22.fillStyle = "yellow";
@@ -726,7 +726,7 @@ window.onload = function () {
     ctx22.setTransform(1, 0, -0.5, 1, 0, 0);
     ctx22.fillStyle = "red";
     ctx22.fillRect(150, 50, 350, 150);
-    
+
     ctx22.globalAlpha = 0.8
     ctx22.setTransform(0, 15, -0.5, 1, 475, 50);
     ctx22.fillStyle = "blue";
@@ -742,17 +742,67 @@ window.onload = function () {
 
     ctx22.globalAlpha = 0.3
     ctx22.setTransform(0, 1.8, 1, -2, 50, 200);
-    ctx22.fillStyle='orange'
-    ctx22.fillRect(0,0,168,75)
+    ctx22.fillStyle = 'orange'
+    ctx22.fillRect(0, 0, 168, 75)
 
 
 
     var myCanvas23 = document.getElementById('myCanvas23');
     var ctx23 = myCanvas23.getContext('2d');
-   var he = myCanvas23.height 
-   var wi = myCanvas23.width 
+    var he = myCanvas23.height
+    var wi = myCanvas23.width
 
 
 
+    var fires = []
+
+    for (let i = 0; i < 100; i++) {
+
+        fires.push({
+            "x": wi / 2 - 100 * Math.random(),
+            "y": he / 2 +90,
+            "r": 25 * Math.random(),
+            "vy": 5 * Math.random(),
+            "time": 100 * Math.random()
+        })
+
+    }
+
+
+    function fire() {
+
+        ctx23.fillStyle = "black"
+        ctx23.globalCompositeOperation = "lighter"
+        ctx23.clearRect(0,0,wi,he)
+        ctx23.fillRect(0, 0, wi, he)
+
+        for (let index = 0; index < 100; index++) {
+
+            var firecolor = ctx23.createRadialGradient(fires[index].x +50, fires[index].y, 2,fires[index].x+50,fires[index].y,fires[index].r)
+            firecolor.addColorStop(0,"white")
+            firecolor.addColorStop(0.4,"yellow")
+            firecolor.addColorStop(0.6,"orange")
+            firecolor.addColorStop(1,"red")
+            ctx23.fillStyle = firecolor
+
+            ctx23.beginPath()
+        ctx23.arc(fires[index].x + 50, fires[index].y, fires[index].r, 0 * Math.PI, 2 * Math.PI)
+            ctx23.fill()
+            
+            fires[index].y -= fires[index].vy
+            fires[index].r -= 0.5
+            fires[index].time -= 1
+
+            if (fires[index].time < 0 || fires[index].r < 0 || fires[index].time < 0) {
+
+                fires[index].x = wi / 2 - 100 * Math.random()
+                fires[index].y = he / 2+100
+                fires[index].r = 25 * Math.random()
+                fires[index].time = 50 * Math.random()
+            }
+        }
+    }
+
+    setInterval(fire, 50 )
 
 }
