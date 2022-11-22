@@ -104,7 +104,7 @@ window.onload = function () {
     ctx5.arc(200, 150, 100, 0 * Math.PI, 2 * Math.PI)
 
     ctx5.stroke()
-
+  /********************* #myCanvas5a ********************** */
     var myCanvas5a = document.getElementById("myCanvas5a")
     var ctx5a = myCanvas5a.getContext('2d')
     ctx5a.beginPath()
@@ -112,6 +112,7 @@ window.onload = function () {
     ctx5a.arc(200, 150, 100, 1 * Math.PI, 2 * Math.PI)
     ctx5a.stroke()
 
+      /********************* #myCanvas5b ********************** */
     var myCanvas5b = document.getElementById("myCanvas5b")
     var ctx5b = myCanvas5b.getContext('2d')
     ctx5b.beginPath()
@@ -121,6 +122,7 @@ window.onload = function () {
     ctx5b.arc(200, 150, 100, 1.5 * Math.PI, 2 * Math.PI)
     ctx5b.stroke()
 
+      /********************* #myCanvas5b ********************** */
     var myCanvas5c = document.getElementById("myCanvas5c")
     var ctx5c = myCanvas5c.getContext('2d')
     ctx5c.beginPath()
@@ -133,13 +135,12 @@ window.onload = function () {
     b = 100
     va = 1
     vb = 1
-
+  /********************* #myCanvas5d ********************** */
     function move() {
         var myCanvas5d = document.getElementById("myCanvas5d")
         var ctx5d = myCanvas5d.getContext('2d')
         ctx5d.beginPath()
         ctx5d.clearRect(0, 0, 400, 300)
-
 
         ctx5d.fillStyle = "purple"
         ctx5d.arc(a, b, 25, 0 * Math.PI, 2 * Math.PI)
@@ -248,6 +249,8 @@ window.onload = function () {
     var k = 0.1
 
     function colorMove() {
+          valueGrad += k
+
         ctx8a.font = 'bold 40pt ariel';
         var gra1 = ctx8a.createLinearGradient(10, 150, 400, 0);
         gra1.addColorStop(0, "purple")
@@ -266,7 +269,7 @@ window.onload = function () {
         if (valueGrad < 0.1) {
             k = 0.1
         }
-        valueGrad += k
+      
 
     }
 
@@ -289,7 +292,7 @@ window.onload = function () {
 
     ctx9.fillRect(0, 0, 400, 300)
 
-
+    /********************* #myCanvas9a ********************** */
     var myCanvas9a = document.getElementById("myCanvas9a")
     var ctx9 = myCanvas9a.getContext('2d')
 
@@ -301,7 +304,7 @@ window.onload = function () {
 
     ctx9.fillRect(0, 0, 400, 300)
 
-
+    /********************* #myCanvas9b ********************** */
     var myCanvas9b = document.getElementById("myCanvas9b")
     var ctx9 = myCanvas9b.getContext('2d')
 
@@ -313,7 +316,7 @@ window.onload = function () {
 
     ctx9.fillRect(0, 0, 400, 300)
 
-
+    /********************* #myCanvas9c ********************** */
     var myCanvas9c = document.getElementById("myCanvas9c")
     var ctx9 = myCanvas9c.getContext('2d')
 
@@ -361,7 +364,7 @@ window.onload = function () {
     });
 
 
-    /********************* #myCanvas10 ********************** */
+    /********************* #myCanvas11 ********************** */
 
     var myCanvas11 = document.getElementById("myCanvas11")
 

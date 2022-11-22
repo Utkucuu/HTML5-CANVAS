@@ -1,33 +1,36 @@
 ### Canvas Çalışma Notları
 
 ##### HTML
-* Canvas boyutu css kullanmadan verilir
+* Canvas boyutu css kullanmadan verilebilir.
 ```<canvas id="myCanvas" height="200" width="300"></canvas>```
 
-##### #myCanvas
+##### #myCanvas / fillrect  
 * Canvas ı seçtik
 
 ```var firstCanvas = document.getElementById("myCanvas")``` 
 
 * Kaç boyutlu çizim yapacağımızı belirttik.  
-```firstCanvas.getContext("2d")```  
+```var ctx = firstCanvas.getContext("2d")```  
+
+* Önce fillstyle ile bir renk komutu verdik. 
+
+```ctx.fillStyle="red"```
 
 * Canvas içinde bir şekil oluşturacağımızı söyledik.
 
-``` var ctx = firstCanvas.getContext("2d") ```
-
-* Renk komutu önce verilmeli  
-```ctx.fillStyle="red"```
+```ctx.fillRect(50, 25, 100, 100)```
 
 * fillRect fonksiyonu şeklimizi 4 köşeli hale getirip özelliklerini vermemizi sağlar.  
 ```ctx.fillRect(x,y,widht,height)```
+
 <img src="/images/images1.png" alt="" width="300" height="300">
 
 ***
 
-##### #myCanvas2
-* Aşağıdaki gibi valueX veya valueY gibi değişkenler kullanılarak koşul durumları yönetilebilir ve döngülerle örüntüler oluşturulabilir.
+##### #myCanvas2 / örnek
+* Aşağıdaki gibi valueX veya valueY gibi değişkenler oluşturularak koşul durumları yönetilebilir ve döngülerle örüntüler oluşturulabilir.  
 
+```ctx.fillRect(x,y,widht,height)```  
 ```ctx2.fillRect(x, y, h, w)```  
 ```x += valueX```   
 ```y += valueY```    
@@ -35,35 +38,35 @@
         
 ***
 
-##### #myCanvas3
-*clearRect(0, 0, canvasGenişliği, canvasYüksekliği) şeklindeki komut, kordinat sistemindeki 0'a 0 noktasından başlayarak verdiğimiz canvas genişlik ve yükseklik değerleri kadar alanın içindeki nesneleri temizle anlamına gelir.  
+##### #myCanvas3 / clearRect
+*clearRect(0, 0, canvasGenişliği, canvasYüksekliği), kordinat sistemindeki 0'a 0 noktasından başlayarak verdiğimiz canvas genişlik ve yükseklik değerleri kadar alanın içindeki nesneleri temizle anlamına gelir.  
 ```ctx3.clearRect(0,0,400,300 )```
 
 ***
 
-##### #myCanvas4
+##### #myCanvas4 / lineTo - moveTo
 
 * Canvas içinde çizgi (doğru) oluşturmak için beginPath() fonksiyonu kullanılır.
 
 ```ctx4.beginPath()```
 
-*Çizeceğimiz çizginin başlangıç konumunu vermek için
+* Çizeceğimiz çizginin başlangıç konumunu vermek için
 
 ```ctx4.moveTo(0,0)``` 
 
-*Çizeceğimiz çizginin bitiş konumunu vermek için
+* Çizeceğimiz çizginin bitiş konumunu vermek için
 
  ```ctx4.lineTo(400,300)```
 
-*Son olarak doğrunun çizilmesi için stroke() fonksiyonu çalıştırılır.
+* Son olarak doğrunun çizilmesi için stroke() fonksiyonu çalıştırılır.
 
 ```ctx4.stroke()```
 
-*Çizgi rengi vermek için şekillerden farkl bir fonskiyon kullanılır.
+* Çizgi rengi vermek için şekillerden farkl bir fonskiyon kullanılır.
 
 ```ctx4.strokeStyle = "blue"```
  
-*Çizgi kalınlığı
+* Çizgi kalınlığı
 
 ```ctx4.lineWidth = 7```
 
@@ -73,12 +76,12 @@
 ```ctx4.lineTo(400,0)```  
 ```ctx4.lineTo(200,0) ```  
 
-*köşe geçişlerini ayarlamak için;  
+* köşe geçişlerini ayarlamak için;  
 ```  ctx4.lineJoin= "bevel"  ``` düz   
 ```  ctx4.lineJoin= "round"  ``` oval  
 ```  ctx4.lineJoin= "miter"  ``` keskin  
 
-*doğruyu kapatmak istersek  
+* Doğruyu kapatmak istersek  
 ```ctx4.closePath()```
 
 * random kullanmakta mümkündür.  
@@ -86,7 +89,7 @@
 
 ***
 
-##### #myCanvas5
+##### #myCanvas5 / Çember - Daire
 
 - ctx.arc(x,y,yarıcap,başlangıçAçı,bitişAçı) şeklinde oval ya da çember gibi şekiller oluşturulur.
 
@@ -94,17 +97,17 @@
 
 * Şekli stroke() ile bitiriyorsak renkler .strokeStyle ile verilir.
 
-* Bu şekilde bir kullanım sayesinde #myCanvas5d id'li canvasta hareket yarattık. Aslında bu kullanım ile şekil bir görünüp bir kayboluyor ve hareket ediyormuş gibi görünüyor.
+* Bu şekilde bir kullanım sayesinde #myCanvas5d id'li canvasta hareket yarattık. Aslında bu kullanım ile şekil bir görünüp bir siliniyor ve hareket ediyormuş gibi görünüyor.
 
 ```ctx5d.beginPath()```  
 ```ctx5d.clearRect(0,0,400,200)```
 
 !!!
-Animasyonu daha da hızlandırmak için  setInterval(move, 1) fonksiyonu bir döngü içine alına bilir
+Animasyonu daha da hızlandırmak için setInterval(move, 1) fonksiyonu bir döngü içine alınabilir.
 
 ***
 
-##### #myCanvas6
+##### #myCanvas6 / createLinearGradient
 - Linear gradient renk geçişlerini sağlamaktadır.
 - Gradient oluşturmak için createLinearGradient fonskiyonu kullanılır x ve y değerleri başlangıç konumudur. x1 ve y1 parametreleri ise x ile y değerlerinin bitiş konumlarıdır.
 
@@ -122,14 +125,14 @@ Animasyonu daha da hızlandırmak için  setInterval(move, 1) fonksiyonu bir dö
 
 ***
 
-##### #myCanvas7
+##### #myCanvas7 / createRadialGradient
 - Dairesel bir gradient oluşturmak için createRadialGradient fonksiyonu kullanılır. r1 birinci gradient yarıçapı, r2 ikinci gradient yarıçapı ifade eder. Yine x ve y değerleri başlangıç ve bitiş noktalarıdır.  
 
 ```ctx7.context.createRadialGradient(x1, y1, r1, x2, y2, r2);```
 
 ***
 
-##### #myCanvas8
+##### #myCanvas8 /shadow
 
 - Canvas içinde text oluşturmak için `fiilText` fonskiyonu kullanılır. 
 
@@ -142,7 +145,7 @@ Animasyonu daha da hızlandırmak için  setInterval(move, 1) fonksiyonu bir dö
 
 ***
 
-##### #myCanvas9
+##### #myCanvas9 / createPattern
 
 - CreatePatter fonksiyonu ile bir götüntü yatay ya da dikey tekrarlanabilir veya desen oluşturulabilir.  
 ```context.createPattern(Image, repetition);```  
@@ -151,10 +154,14 @@ repetition: no-repeat
 repetition: repeat-x    
 repetition:repeat-y  
 
-* Not: Klasörden yüklediğim resmi kullanamadım neden bilmiyorum. Araştıracağım.
+* fillstyle ile renk verme dışında da işlemler yapılabilir.
+```var pat = ctx9.createPattern(image, "no-repeat")```  
+```ctx9.fillStyle = pat```
+
+
 
 ***
-##### #myCanvas10
+##### #myCanvas10 / drawImage
 - drawImage fonskiyonu ile video veya resimleri canvas içinde kullanabiliriz.
 ```context.drawImage(img,imgx,imgy,imgwidth,imgheight,canvasX,canvasY,canvasWidth,canvasHeight);```  
 [Denemek için tıkla](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_canvas_drawimage3)
@@ -165,7 +172,8 @@ repetition:repeat-y
 
 !!! 
 ***myCanvas10a*** 
-Canvasta mouse hareket etttiğinde mouse un sayfadaki konumunu alıp canvasın sayfadaki konumundan çıkardığımızda mouse un canvas üzerindeki koordinatını bulmuş oluruz. Bu sayede canvasın konumu sebebiyle resim ile mause arasında uzaklık meydana gelmez.  
+* Fare canvas içinde hareket ettiğinde "mousemove" fonskiyonu çalışacak ve `var canvasLocation = myCanvas10a.getBoundingClientRect()` scriptindeki "getBoundingClientRect" metodu canvasın konum verilerini  "canvasLocation" değişkenine dönecek.
+"canvasLocation.left" ve " canvasLocation.top" değerleri canvasın dikey / yatay konum bilgilerini içerecek. Bu değerleri farenin x ve y değerlerini taşıyan event.clientX ile event.clientY değerlerinden çıkardığımızda, canvasın browser içindeki konumu sebebiyle resim ile fare arasında uzaklık kaybolacak. Özetle arı resiminin konumu fare üzerinde sıfırlanmış olacak ve fare hareket ettiğinde resim de farenin konumunu izleyecek. 
 
 ```var canvasLocation = myCanvas10a.getBoundingClientRect()```  
 ```console.log(canvasLocation)```  
@@ -174,20 +182,20 @@ Canvasta mouse hareket etttiğinde mouse un sayfadaki konumunu alıp canvasın s
 ***
 
 
-##### #myCanvas11
+##### #myCanvas11 / translate
 
-- oluşturulan nesnenin konumları translate ile verilebilir.  
+- Oluşturulan nesnenin konumları translate ile verilebilir. Fonksiyon içinde kullanılarak şekiller hareket ettirilebilir.
 ```ctx11.translate(x, y);```  
 ```ctx11.fillRect(0,0,150,150)```  
-- İçi boş bir şekil oluşturmaya yarar  
+- İçi boş bir şekil oluşturmaya yarar.    
  ```ctx11.strokeRect(0, 0, 150, 150);```  
 -içi boş şeklin rengi  
 ``` ctx11.strokeStyle='red';```  
 
 ***
-##### #myCanvas12
+##### #myCanvas12 / rotate
 
-- nesneyi döndürmek için kullanılır. (Math.PI = 180)  
+- rotate() nesneyi kendi ekseninde döndürmek için kullanılır. (Math.PI = 180)  
 ```ctx12.rotate(Math.PI/4)```
 
 
@@ -266,3 +274,12 @@ xor
 
 ***
 ##### #myCanvas20
+
+***
+##### #myCanvas21
+
+***
+##### #myCanvas22
+
+***
+##### #myCanvas23
