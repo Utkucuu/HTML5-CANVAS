@@ -104,7 +104,7 @@ window.onload = function () {
     ctx5.arc(200, 150, 100, 0 * Math.PI, 2 * Math.PI)
 
     ctx5.stroke()
-  /********************* #myCanvas5a ********************** */
+    /********************* #myCanvas5a ********************** */
     var myCanvas5a = document.getElementById("myCanvas5a")
     var ctx5a = myCanvas5a.getContext('2d')
     ctx5a.beginPath()
@@ -112,7 +112,7 @@ window.onload = function () {
     ctx5a.arc(200, 150, 100, 1 * Math.PI, 2 * Math.PI)
     ctx5a.stroke()
 
-      /********************* #myCanvas5b ********************** */
+    /********************* #myCanvas5b ********************** */
     var myCanvas5b = document.getElementById("myCanvas5b")
     var ctx5b = myCanvas5b.getContext('2d')
     ctx5b.beginPath()
@@ -122,7 +122,7 @@ window.onload = function () {
     ctx5b.arc(200, 150, 100, 1.5 * Math.PI, 2 * Math.PI)
     ctx5b.stroke()
 
-      /********************* #myCanvas5b ********************** */
+    /********************* #myCanvas5b ********************** */
     var myCanvas5c = document.getElementById("myCanvas5c")
     var ctx5c = myCanvas5c.getContext('2d')
     ctx5c.beginPath()
@@ -135,7 +135,7 @@ window.onload = function () {
     b = 100
     va = 1
     vb = 1
-  /********************* #myCanvas5d ********************** */
+    /********************* #myCanvas5d ********************** */
     function move() {
         var myCanvas5d = document.getElementById("myCanvas5d")
         var ctx5d = myCanvas5d.getContext('2d')
@@ -249,7 +249,7 @@ window.onload = function () {
     var k = 0.1
 
     function colorMove() {
-          valueGrad += k
+        valueGrad += k
 
         ctx8a.font = 'bold 40pt ariel';
         var gra1 = ctx8a.createLinearGradient(10, 150, 400, 0);
@@ -269,7 +269,7 @@ window.onload = function () {
         if (valueGrad < 0.1) {
             k = 0.1
         }
-      
+
 
     }
 
@@ -399,7 +399,7 @@ window.onload = function () {
     var ctx13 = myCanvas13.getContext("2d")
 
     ctx13.fillRect(0, 0, 150, 150)
-    ctx13.save();
+    // ctx13.save();
     // context.scale(x, y);
 
     ctx13.scale(2, 1); //2 = %200 , 1 = % 100
@@ -411,7 +411,7 @@ window.onload = function () {
    
     }
      */
-    ctx13.restore();
+    // ctx13.restore();
     /**
     {
    
@@ -435,7 +435,7 @@ window.onload = function () {
     var plus = 2.5
     var sub = 3
     var vyy = -0.1 / 2
-    function ropMove() {
+    function ropeMove() {
         sub += vyy
         num3X += plus
         num3Y += sub
@@ -454,16 +454,14 @@ window.onload = function () {
         if (num3Y < 100) {
             plus = -2.5
             sub = 3
-
         }
         if (num3X == 150) {
             plus = +2.5
             sub = 3
-
         }
     }
 
-    setInterval(ropMove, 10)
+    setInterval(ropeMove, 10)
 
 
     /********************* #myCanvas15 ********************** */
@@ -499,6 +497,7 @@ window.onload = function () {
     ctx16.fillStyle = "blue"
     ctx16.fillRect(100, 100, 150, 150)
 
+    /********************* #myCanvas16a ********************** */
 
     var myCanvas16a = document.getElementById("myCanvas16a")
     var ctx16a = myCanvas16a.getContext("2d")
@@ -521,12 +520,25 @@ window.onload = function () {
         val1y += k1
     }
 
+ $('#btn16a').click(function (e) {
+     
     setInterval(squareMove, 50)
+  
+    
+ });
 
+   
 
+/********************* #myCanvas16b ********************** */
 
     var myCanvas16b = document.getElementById("myCanvas16b")
     var ctx16b = myCanvas16b.getContext("2d")
+
+
+    val2x = 150
+    val2y = 150
+    k2 = -1
+
 
     function squareMove2() {
         ctx16b.clearRect(0, 0, 400, 300)
@@ -536,15 +548,21 @@ window.onload = function () {
         ctx16b.save()
         ctx16b.globalAlpha = 0.5;
         ctx16b.fillStyle = "blue"
-        ctx16b.fillRect(val1x, val1y, 150, 150)
+        ctx16b.fillRect(val2x, val2y, 150, 150)
 
-        val1x += k1
-        val1y += k1
+        val2x += k2
+        val2y += k2
 
         ctx16b.restore()
     }
 
-    setInterval(squareMove2, 50)
+   
+
+    $('#btn16b').click(function (e) { 
+    
+         setInterval(squareMove2, 50)
+
+     });
 
 
     /********************* #myCanvas17 ********************** */
@@ -574,7 +592,7 @@ window.onload = function () {
     var ctx18 = myCanvas18.getContext('2d');
     ctx18.fillStyle = 'blue';
     ctx18.fillRect(10, 10, 50, 50);
-    ctx18.globalCompositeOperation = 'source-over';
+    ctx18.globalCompositeOperation = 'xor';
     ctx18.beginPath();
     ctx18.fillStyle = 'red';
     ctx18.arc(50, 50, 30, 0, 2 * Math.PI);
@@ -625,10 +643,16 @@ window.onload = function () {
 
     }
 
-    setInterval(ballMove, 100)
+
+    
+    $('#btn19').click(function (e) { 
+    
+        setInterval(ballMove, 100)
+
+    });
+
 
     /********************* #myCanvas20 ********************** */
-
 
     var myCanvas20 = document.getElementById('myCanvas20');
     var ctx20 = myCanvas20.getContext('2d');
@@ -648,10 +672,7 @@ window.onload = function () {
         }
         )
 
-        //  var view = new Image()
-
     }
-
 
     function snowMove() {
 
@@ -663,16 +684,15 @@ window.onload = function () {
 
             ctx20.beginPath()
             ctx20.arc(snow[i].x, snow[i].y, snow[i].r, Math.PI * 0, Math.PI * 2);
-
-
+            ctx20.fillStyle="white"
             ctx20.fill()
 
             snow[i].y += snow[i].vy
-            snow[i].X += 10 - Math.random()
+            // snow[i].x += 0.3 - Math.random()
 
 
             if (snow[i].y > 400) {
-                snow[i].X = 600 * Math.random()
+                snow[i].x = 600 * Math.random()
                 snow[i].y = -400 * Math.random()
                 snow[i].r = Math.random()
                 snow[i].vy = 10 * Math.random()
@@ -714,6 +734,7 @@ window.onload = function () {
     ctx21.beginPath()
     ctx21.arc(200, 240, 50, 0 * Math.PI, 2 * Math.PI)
     ctx21.stroke()
+    
     /********************* #myCanvas22 ********************** */
 
 
@@ -748,6 +769,7 @@ window.onload = function () {
     ctx22.fillStyle = 'orange'
     ctx22.fillRect(0, 0, 168, 75)
 
+/********************* #myCanvas23 ********************** */
 
 
     var myCanvas23 = document.getElementById('myCanvas23');
@@ -763,7 +785,7 @@ window.onload = function () {
 
         fires.push({
             "x": wi / 2 - 100 * Math.random(),
-            "y": he / 2 +90,
+            "y": he / 2 + 90,
             "r": 25 * Math.random(),
             "vy": 5 * Math.random(),
             "time": 100 * Math.random()
@@ -776,22 +798,24 @@ window.onload = function () {
 
         ctx23.fillStyle = "black"
         ctx23.globalCompositeOperation = "lighter"
-        ctx23.clearRect(0,0,wi,he)
+        ctx23.clearRect(0, 0, wi, he)
         ctx23.fillRect(0, 0, wi, he)
 
         for (let index = 0; index < 100; index++) {
 
-            var firecolor = ctx23.createRadialGradient(fires[index].x +50, fires[index].y, 2,fires[index].x+50,fires[index].y,fires[index].r)
-            firecolor.addColorStop(0,"white")
-            firecolor.addColorStop(0.4,"yellow")
-            firecolor.addColorStop(0.6,"orange")
-            firecolor.addColorStop(1,"red")
+            var firecolor = ctx23.createRadialGradient(fires[index].x + 50, fires[index].y, 2, fires[index].x + 50, fires[index].y, fires[index].r)
+            firecolor.addColorStop(0, "white")
+            firecolor.addColorStop(0.4, "yellow")
+            firecolor.addColorStop(0.6, "orange")
+            firecolor.addColorStop(1, "red")
+          
             ctx23.fillStyle = firecolor
 
             ctx23.beginPath()
-        ctx23.arc(fires[index].x + 50, fires[index].y, fires[index].r, 0 * Math.PI, 2 * Math.PI)
-            ctx23.fill()
+            ctx23.arc(fires[index].x + 50, fires[index].y, fires[index].r, 0 * Math.PI, 2 * Math.PI)
             
+            ctx23.fill()
+
             fires[index].y -= fires[index].vy
             fires[index].r -= 0.5
             fires[index].time -= 1
@@ -799,13 +823,13 @@ window.onload = function () {
             if (fires[index].time < 0 || fires[index].r < 0 || fires[index].time < 0) {
 
                 fires[index].x = wi / 2 - 100 * Math.random()
-                fires[index].y = he / 2+100
+                fires[index].y = he / 2 + 90
                 fires[index].r = 25 * Math.random()
                 fires[index].time = 50 * Math.random()
             }
         }
     }
 
-    setInterval(fire, 50 )
+    setInterval(fire, 50)
 
 }

@@ -89,7 +89,7 @@
 
 ***
 
-##### #myCanvas5 / Çember - Daire
+##### #myCanvas5 / Çember - Daire (arc)
 
 - ctx.arc(x,y,yarıcap,başlangıçAçı,bitişAçı) şeklinde oval ya da çember gibi şekiller oluşturulur.
 
@@ -200,16 +200,16 @@ repetition:repeat-y
 
 
 ***
-##### #myCanvas13
+##### #myCanvas13 / scale
 - scale ile nesnemizi x ve y eksenlerine yüzdesel olarak büyütüp küçültebiliriz.  
  ```ctx13.scale(x, y); //x = %x , 1 = %y```
 
-- Save kullandığımızda save komtu öncesindeki özellikleri yani canvas durumunu kaydedip daha sonra ihtiyacımız olan yerde restore ile çağırabiliriz. Bu şekilde restore kullandığımız yerde bir önceki save durumunda kalmasını istediğimiz ayarlamaları koruyabiliriz.  
+- "save()" kullandığımızda save komtu öncesindeki özellikleri yani canvas durumunu kaydedip daha sonra ihtiyacımız olan yerde restore ile çağırabiliriz. Bu şekilde "restore()" kullandığımız yerde bir önceki save durumunda kalmasını istediğimiz özellikleri koruyabiliriz.  
 ```ctx13.save();```  
 ```ctx13.restore();```  
 
 ***
-##### #myCanvas14  
+##### #myCanvas14 / bezierCurveTo
 
 -bezierCurveTo fonskiyonu ile eğriler oluşturabiliriz. 
  ```ctx14.bezierCurveTo(num1X, num1Y, num2X, num2Y, num3X, num3Y);```  
@@ -218,9 +218,8 @@ num2X, num2Y : ikinci eğri kordinatları (kırılma eğrisi)
 num3X, num3Y : üçüncü eğri bitiş kordinatları  
 <img src="/images/img_beziercurve.gif" alt="">
 
-
 ***
-##### #myCanvas15    
+##### #myCanvas15 / getImageData 
 
 - getImageData() ile bir resmin piksel verilerini alabiliriz.
 
@@ -229,31 +228,42 @@ num3X, num3Y : üçüncü eğri bitiş kordinatları
 - Aldığımız piksel verileri console da bir data objesinin içinde tutulur.  
 <img src="/images/imgData.png" alt="">  
 
-- a +=4 dememizin sebebi data objesi içindeki rgba değerlerinin her 4 tanesinde 255 in tekrar etmesidir.  
+- a +=4 dememizin sebebi data objesi içindeki rgba değerlerinin her 4 tanesinde bir 255 in tekrar etmesidir.  
 ```for (let a = 0; a < imgData.data.length; a += 4)```  
-- Değiştirdiğimiz data verilerini canvas içine geri göndeririz.  
+
+* rgba değerlerini arttırıp azaltarak değişik görünümler elde edebiliriz 
+r: ```imgData.data[a] = imgData.data[a] - 40```
+g: ```imgData.data[a + 1] = imgData.data[a + 1] - 50```
+b: ```imgData.data[a + 2] = imgData.data[a + 2] - 100```
+a: ```imgData.data[a + 3] = 200 ```
+
+
+- Değiştirdiğimiz data verilerini canvas içine geri göndeririz ve uygulanmasını sağlarız.
 ```ctx15.putImageData(imgData, 0,0);```
 
 
+
 ***
-##### #myCanvas16  
+##### #myCanvas16 / globalAlpha (opacity)
+
+* globalAlpha özelliği 0 ile 1 arasında bir değer alır, yapılan çizimler için genel bir saydamlık derecesi tanımlar. Bu özellikle saydamlık belirlendikten sonra yapılan tüm çizimler aynı saydamlıta olacaktır.   
 
 ```globalAlpha = x;``` 0<= x <=1  
 
 !!!  
-myCanvas16b de kırmızı karenin saydam görünmemesi `save()` ve `restore()` ile sağlanmıştır.
+Tüm çizimlerin aynı saydamlıkta olmasını istemiyorsak bunu `save()` ve `restore()` ile yönetebiliriz. (myCanvasb)  
 
 
 ***
-##### #myCanvas17
--her seferinde birbirinden bağımsız çizimler yapmak için beginPath
- ve stroke yapılarını kullanırız  
+##### #myCanvas17 / bağımsız çizim
+-her seferinde birbirinden bağımsız çizimler yapmak için beginPath ve stroke yapılarını kullanırız.    
 ```ctx17.beginPath()```
 ```ctx17.stroke()```
 
 ***
-##### #myCanvas18
-```context.globalCompositeOperation =' '```
+##### #myCanvas18 / globalCompositeOperation
+* globalCompositeOperation fonskiyonu kesişen veya üst üste gelen nesnelerin birbirlerine göre durumlarını değiştirebiliriz. 
+```context.globalCompositeOperation ='...'```
 source-over  
 source-atop  
 source-in  
@@ -268,18 +278,22 @@ xor
 (denemek için tıkla)[https://www.w3schools.com/tags/playcanvas.asp?filename=playcanvas_globalcompop&preval=source-over]  
 
 ***
-##### #myCanvas19
+##### #myCanvas19 / ball animation
 
 
 
-***
-##### #myCanvas20
 
 ***
-##### #myCanvas21
+##### #myCanvas20 / snow animation
+
+* `textAlign()` fonskiyonu ile bir texti canvas içindeki başka bir nesnenin sonuna, başına veya ortasına konumlandırabiliriz.  
 
 ***
-##### #myCanvas22
+##### #myCanvas21 / textAlign
 
 ***
-##### #myCanvas23
+##### #myCanvas22 / setTransform
+* `setTransform()` fonksiyonu ölçeklendirmenize, döndürmenize, taşımanıza ve eğmenize olanak tanır.
+
+***
+##### #myCanvas23 / fire animation 
