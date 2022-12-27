@@ -503,9 +503,10 @@ window.onload = function () {
     var ctx16a = myCanvas16a.getContext("2d")
 
     val1x = 150
-    val1y = 150
+    val1y = 160
     k1 = -1
 
+    
 
     function squareMove() {
         ctx16a.clearRect(0, 0, 400, 300)
@@ -527,18 +528,14 @@ window.onload = function () {
     
  });
 
-   
-
 /********************* #myCanvas16b ********************** */
 
     var myCanvas16b = document.getElementById("myCanvas16b")
     var ctx16b = myCanvas16b.getContext("2d")
 
-
     val2x = 150
     val2y = 150
     k2 = -1
-
 
     function squareMove2() {
         ctx16b.clearRect(0, 0, 400, 300)
@@ -555,8 +552,6 @@ window.onload = function () {
 
         ctx16b.restore()
     }
-
-   
 
     $('#btn16b').click(function (e) { 
     
