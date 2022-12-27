@@ -1,5 +1,7 @@
 ### Canvas Çalışma Notları
 
+https://htmlcanvasnot.netlify.app
+
 ##### HTML
 * Canvas boyutu css kullanmadan verilebilir.
 ```<canvas id="myCanvas" height="200" width="300"></canvas>```
